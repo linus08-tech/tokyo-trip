@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>도쿄 여행 일정 · 2026.05.27 — 05.31</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FBF7F0;
+    --bg-card: #FFFFFF;
+    --bg-soft: #F4EFE6;
+    --ink: #1F1B16;
+    --ink-soft: #4A453E;
+    --ink-mute: #8A847B;
+    --line: rgba(31, 27, 22, 0.08);
+    --line-strong: rgba(31, 27, 22, 0.15);
+    --accent: #B83A30;
+    --accent-soft: #F2DDD8;
+    --accent-deep: #7A2520;
+    --gold: #A38450;
+    --serif: 'Noto Serif KR', serif;
+    --sans: 'Noto Sans KR', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 24px 16px 80px;
+  }
+  .trip { max-width: 760px; margin: 0 auto; }
+
+  /* ---------- Document header ---------- */
+  .doc-header {
+    text-align: center;
+    padding: 40px 0 48px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 48px;
+  }
+  .doc-overline {
+    font-family: var(--serif);
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+  }
+  .doc-title {
+    font-family: var(--serif);
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+  .doc-title-sub {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 16px;
+    margin-bottom: 22px;
+  }
+  .doc-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 13px;
+    color: var(--ink-mute);
+  }
+  .doc-meta span { display: inline-flex; align-items: center; }
+  .doc-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--ink-mute); display: inline-block; }
+
+  /* ---------- Section ---------- */
+  .section { margin-bottom: 56px; }
+  .section-head { margin-bottom: 24px; }
+  .section-label {
+    font-family: var(--serif);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  .section-intro {
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-top: 8px;
+    max-width: 540px;
+  }
+
+  /* ---------- Flight cards ---------- */
+  .flight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  @media (max-width: 600px) {
+    .flight-grid { grid-template-columns: 1fr; }
+  }
+  .flight-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 22px 22px 20px;
+    position: relative;
+  }
+  .flight-card-dir {
+    font-family: var(--serif);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  .flight-route {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .flight-airport { flex: 1; }
+  .flight-iata {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+  .flight-time {
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+  .flight-arrow {
+    color: var(--ink-mute);
+    font-size: 16px;
+  }
+  .flight-detail {
+    font-size: 12px;
+    color: var(--ink-mute);
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* ---------- Hotel cards ---------- */
+  .hotel-stack { display: flex; flex-direction: column; gap: 14px; }
+  .hotel-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    padding: 18px 22px;
+  }
+  .hotel-card-when {
+    font-family: var(--serif);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .hotel-card-name {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .hotel-card-info {
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- Day cards ---------- */
+  .day {
+    margin-bottom: 40px;
+  }
+  .day-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 6px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  .day-number {
+    font-family: var(--serif);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .day-date {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.2;
+    flex: 1;
+  }
+  .day-style {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    color: var(--accent-deep);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+  .day-style.mid { background: #F0E6D2; color: #6B5520; }
+  .day-tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin-bottom: 22px;
+  }
+
+  /* ---------- Timeline ---------- */
+  .timeline {
+    position: relative;
+    padding-left: 22px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: var(--line-strong);
+  }
+  .tl-item {
+    position: relative;
+    padding: 8px 0 16px;
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 14px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1.5px solid var(--ink-mute);
+  }
+  .tl-item.key::before {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .tl-item.food::before {
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+  .tl-item.move::before {
+    background: var(--bg);
+    border-color: var(--ink-mute);
+    border-style: dashed;
+  }
+  .tl-time {
+    font-family: var(--serif);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .tl-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+  .tl-desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+  .tl-desc strong { color: var(--ink); font-weight: 500; }
+  .tl-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .tl-tag {
+    font-size: 11px;
+    padding: 2px 9px;
+    border-radius: 10px;
+    background: var(--bg-soft);
+    color: var(--ink-soft);
+  }
+  .tl-tag.mark {
+    background: var(--accent-soft);
+    color: var(--accent-deep);
+    font-weight: 500;
+  }
+  .tl-loc {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: var(--bg-soft);
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .tl-loc strong { color: var(--ink); font-weight: 500; }
+
+  .alert-box {
+    margin: 14px 0 18px;
+    padding: 12px 16px;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+    font-size: 13px;
+    color: var(--accent-deep);
+    line-height: 1.6;
+  }
+  .alert-box strong { font-weight: 600; }
+
+  /* ---------- Food guide ---------- */
+  .food-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .food-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 20px 22px;
+  }
+  .food-card-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  .food-category {
+    font-family: var(--serif);
+    font-size: 16px;
+    font-weight: 500;
+    flex: 1;
+  }
+  .food-pill {
+    font-size: 10px;
+    padding: 3px 9px;
+    border-radius: 10px;
+    background: var(--accent-soft);
+    color: var(--accent-deep);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .food-list { display: flex; flex-direction: column; gap: 12px; }
+  .food-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .food-row-name {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  .food-row-jp {
+    font-family: var(--serif);
+    font-size: 11px;
+    color: var(--ink-mute);
+    margin-bottom: 4px;
+    letter-spacing: 0.02em;
+  }
+  .food-row-desc {
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .food-row-num {
+    font-family: var(--serif);
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 500;
+    min-width: 18px;
+    padding-top: 2px;
+  }
+
+  /* ---------- Shop guide ---------- */
+  .shop-grid {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 22px;
+  }
+  .shop-section {
+    margin-bottom: 22px;
+  }
+  .shop-section:last-child { margin-bottom: 0; }
+  .shop-section-title {
+    font-family: var(--serif);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--accent);
+  }
+  .shop-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .shop-list li {
+    list-style: none;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.65;
+  }
+  .shop-list li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .shop-list strong { color: var(--ink); font-weight: 500; }
+
+  /* ---------- Transport ---------- */
+  .transport-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 22px;
+    margin-bottom: 16px;
+  }
+  .transport-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  .transport-dir {
+    font-family: var(--serif);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .transport-route-title {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 500;
+    flex: 1;
+  }
+  .transport-duration {
+    font-size: 12px;
+    color: var(--ink-mute);
+    font-family: var(--serif);
+  }
+  .step-list { display: flex; flex-direction: column; gap: 12px; }
+  .step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .step-num {
+    font-family: var(--serif);
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 500;
+    min-width: 24px;
+    padding-top: 2px;
+  }
+  .step-content { flex: 1; }
+  .step-name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 3px;
+  }
+  .step-detail {
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+  .step-detail strong { color: var(--ink); font-weight: 500; }
+  .step-cost {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 11px;
+    color: var(--accent);
+    font-family: var(--serif);
+    font-weight: 500;
+  }
+
+  /* ---------- Checklist ---------- */
+  .check-grid {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 22px;
+  }
+  .check-section { margin-bottom: 20px; }
+  .check-section:last-child { margin-bottom: 0; }
+  .check-section-title {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+  .check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .check-item {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    align-items: flex-start;
+  }
+  .check-item::before {
+    content: '□';
+    color: var(--ink-mute);
+    font-family: var(--serif);
+    font-size: 14px;
+    padding-top: 1px;
+  }
+  .check-item strong { color: var(--ink); font-weight: 500; }
+
+  /* ---------- Footer ---------- */
+  .doc-footer {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-mute);
+  }
+  .doc-footer .seal {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 6px 16px;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  /* ---------- Print ---------- */
+  @media print {
+    body { background: white; padding: 0; }
+    .day, .section { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<article class="trip">
+
+  <header class="doc-header">
+    <div class="doc-overline">Tokyo · May 2026</div>
+    <h1 class="doc-title">우리의 도쿄</h1>
+    <p class="doc-title-sub">a quiet itinerary for two</p>
+    <div class="doc-meta">
+      <span>2026.05.27 (수) — 05.31 (일)</span>
+      <span class="dot"></span>
+      <span>4박 5일</span>
+      <span class="dot"></span>
+      <span>경준 · 주영</span>
+    </div>
+  </header>
+
+  <!-- ============================================ -->
+  <!-- FLIGHT INFO -->
+  <!-- ============================================ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-label">Flights</div>
+      <h2 class="section-title">비행 정보</h2>
+    </div>
+
+    <div class="flight-grid">
+      <div class="flight-card">
+        <div class="flight-card-dir">출국 · 5월 27일 (수)</div>
+        <div class="flight-route">
+          <div class="flight-airport">
+            <div class="flight-iata">ICN</div>
+            <div class="flight-time">07:25 · T2</div>
+          </div>
+          <div class="flight-arrow">→</div>
+          <div class="flight-airport">
+            <div class="flight-iata">NRT</div>
+            <div class="flight-time">09:55 · T1</div>
+          </div>
+        </div>
+        <div class="flight-detail">
+          <span>진에어 LJ0201</span>
+          <span>2h 30m · 위탁 15kg</span>
+        </div>
+      </div>
+
+      <div class="flight-card">
+        <div class="flight-card-dir">귀국 · 5월 31일 (일)</div>
+        <div class="flight-route">
+          <div class="flight-airport">
+            <div class="flight-iata">NRT</div>
+            <div class="flight-time">20:10 · T1</div>
+          </div>
+          <div class="flight-arrow">→</div>
+          <div class="flight-airport">
+            <div class="flight-iata">ICN</div>
+            <div class="flight-time">22:50 · T2</div>
+          </div>
+        </div>
+        <div class="flight-detail">
+          <span>RS0704</span>
+          <span>2h 40m · 위탁 15kg</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- HOTELS -->
+  <!-- ============================================ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-label">Stays</div>
+      <h2 class="section-title">숙소</h2>
+      <p class="section-intro">전반 3일은 다이칸야마 가까운 메구로 동네, 후반 2일은 롯본기 도심 한복판. 두 도쿄의 다른 결을 짧게 다 맛볼 수 있는 구성.</p>
+    </div>
+
+    <div class="hotel-stack">
+      <div class="hotel-card">
+        <div class="hotel-card-when">5/27 (수) — 5/29 (금) · 솔로</div>
+        <div class="hotel-card-name">Hotel Residence Ohashi Kaikan</div>
+        <div class="hotel-card-info">
+          도쿄 메구로구 오하시 · 이케지리오하시역 도보 7분 · 체크인 16:00<br>
+          다이칸야마·나카메구로 도보권. 시부야까지 한 정거장.
+        </div>
+      </div>
+      <div class="hotel-card">
+        <div class="hotel-card-when">5/29 (금) — 5/31 (일) · 듀오</div>
+        <div class="hotel-card-name">APA 호텔 롯본기 Six</div>
+        <div class="hotel-card-info">
+          미나토구 롯본기 · 롯본기역 도보권<br>
+          롯본기 힐즈·미드타운·아자부다이 힐즈 모두 도보권. 시부야·신주쿠 지하철 빠름.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- DAY 1 -->
+  <!-- ============================================ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-label">Day-by-day · Part 1 — Solo</div>
+      <h2 class="section-title">일정 · 솔로</h2>
+    </div>
+
+    <div class="day">
+      <div class="day-header">
+        <div class="day-date"><span class="day-number">D1</span> &nbsp; 5/27 수요일</div>
+        <div class="day-style mid">중간형</div>
+      </div>
+      <p class="day-tagline">— 도쿄, 다시 시작.</p>
+
+      <div class="timeline">
+        <div class="tl-item move">
+          <div class="tl-time">04:30</div>
+          <div class="tl-title">인천공항 T2 도착</div>
+          <div class="tl-desc">국제선 권장 2시간 전 도착. 진에어 카운터 체크인 + 보안검색 + 출국 심사. 위탁 수하물 15kg 확인.</div>
+        </div>
+
+        <div class="tl-item move">
+          <div class="tl-time">07:25</div>
+          <div class="tl-title">진에어 LJ0201 출발</div>
+          <div class="tl-desc">ICN T2 → NRT T1. 비행시간 2시간 30분. 기내에서 한숨 자두기.</div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">09:55 — 10:45</div>
+          <div class="tl-title">나리타 T1 도착 · 입국 수속</div>
+          <div class="tl-desc">진에어는 NRT T1 도착. 입국 심사 줄 30~40분 예상(외국인 줄), 위탁 짐 찾기. <strong>Visit Japan Web 사전 등록</strong>해두면 QR 한 번으로 패스 빠름.</div>
+        </div>
+
+        <div class="tl-item key">
+          <div class="tl-time">10:50 — 12:30</div>
+          <div class="tl-title">나리타 익스프레스(N'EX)로 시부야행</div>
+          <div class="tl-desc">
+            T1 도착 게이트 → 표지판 따라 <strong>지하 1층(B1F) JR 카운터</strong>로 약 5분 도보. JR 동일본 외국인 카운터에서 N'EX 티켓 구매.<br>
+            <strong>외국인 한정 N'EX 왕복 5,000엔</strong>이 일반 편도 2장보다 저렴(편도 3,250엔 × 2). 여권 필수.<br>
+            출발: 11:14 또는 11:44 시부야행 → 시부야 도착 약 80분.
+          </div>
+          <div class="tl-loc">
+            <strong>대안</strong> · 게이세이 스카이라이너(2,580엔, 닛포리 환승 필요) — 더 저렴하지만 환승 1회 추가. 짐 많으면 N'EX 권장.
+          </div>
+        </div>
+
+        <div class="tl-item move">
+          <div class="tl-time">12:35</div>
+          <div class="tl-title">시부야역 → 이케지리오하시역</div>
+          <div class="tl-desc">시부야에서 <strong>도큐 덴엔토시선</strong> 1정거장(약 3분, 180엔). 이케지리오하시역 도착 후 호텔까지 도보 약 7분.</div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">13:00</div>
+          <div class="tl-title">호텔 짐 보관</div>
+          <div class="tl-desc">체크인은 16시지만 짐은 미리 맡기기 가능. 가벼운 몸으로 동네 탐험 시작.</div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-time">13:30</div>
+          <div class="tl-title">나카메구로 첫 점심</div>
+          <div class="tl-desc">호텔에서 메구로강 방향 도보 10분. 강변 라멘·소바 가게 중 가볍게. 비행기에서 컨디션 봐서 가벼운 메뉴 추천.</div>
+        </div>
+
+        <div class="tl-item key">
+          <div class="tl-time">15:00 — 17:30</div>
+          <div class="tl-title">다이칸야마 T-SITE · 츠타야</div>
+          <div class="tl-desc">
+            호텔 도보 15분 또는 도큐 도요코선 1정거장. 1호관(인문·여행), 2호관(디자인·아트), 3호관(요리·잡지) 천천히 둘러보기.<br>
+            2층 <strong>안진(Anjin) 라운지</strong>에서 빈티지 매거진 보며 커피. 츠타야는 이번 여행에서 한 번만 갈 거니까 오늘 푹 빠지기.
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">서점</span>
+            <span class="tl-tag">카페</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">17:45</div>
+          <div class="tl-title">호텔 체크인 + 짧은 휴식</div>
+          <div class="tl-desc">짐 정리, 샤워, 한숨 돌리기. 시차 없으니 컨디션 회복은 빠를 것.</div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-time">19:30</div>
+          <div class="tl-title">나카메구로 첫 저녁</div>
+          <div class="tl-desc">메구로강 강변 산책 + 저녁 식사. 5월 말 초저녁 강변 분위기 최고. 강변 이탈리안·이자카야·라멘 중 골라잡기.</div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">21:30</div>
+          <div class="tl-title">호텔 복귀 · 일찍 마무리</div>
+          <div class="tl-desc">첫날은 무리하지 않기. 내일부터 공격형.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- DAY 2 -->
+    <!-- ============================================ -->
+    <div class="day">
+      <div class="day-header">
+        <div class="day-date"><span class="day-number">D2</span> &nbsp; 5/28 목요일</div>
+        <div class="day-style">공격형</div>
+      </div>
+      <p class="day-tagline">— 서점의 도시, 그리고 첫 파르페.</p>
+
+      <div class="timeline">
+        <div class="tl-item food">
+          <div class="tl-time">08:00</div>
+          <div class="tl-title">나카메구로 모닝 카페</div>
+          <div class="tl-desc"><strong>Onibus Coffee 나카메구로 본점</strong> 또는 <strong>Streamer Coffee</strong>. 일찍 가야 자리 있음. 동네 골목 산책 겸 워밍업.</div>
+          <div class="tl-meta">
+            <span class="tl-tag">스페셜티 커피</span>
+          </div>
+        </div>
+
+        <div class="tl-item key">
+          <div class="tl-time">09:30 — 12:30</div>
+          <div class="tl-title">시모키타자와 · 서점 천국</div>
+          <div class="tl-desc">
+            메구로 → 시부야 → 게이오 이노카시라선 (총 약 25분).<br>
+            <strong>COW BOOKS</strong> · <strong>빌리지 뱅가드</strong> · <strong>B&amp;B(Book and Beer)</strong> · 고서점 골목. 한국에서 보기 힘든 일본 디자인 잡지·사진집·만화 다양. 2~3시간 잡고 천천히.
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">서점</span>
+            <span class="tl-tag">빈티지</span>
+          </div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-time">12:30</div>
+          <div class="tl-title">시모키타자와 점심</div>
+          <div class="tl-desc">개성 가득한 카레집·네팔 식당·라멘. 혼밥 친화적인 골목 식당 많음. 점심은 가볍게 — 오후에 파르페 있음.</div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">14:00</div>
+          <div class="tl-title">캣 스트리트 · 우라하라주쿠</div>
+          <div class="tl-desc">시모키타자와 → 시부야 → 하라주쿠 방향 산책. 하라주쿠·시부야 사이 골목길. 갈 때마다 신상 가게 생기는 동네라 새로움.</div>
+        </div>
+
+        <div class="tl-item key">
+          <div class="tl-time">16:00</div>
+          <div class="tl-title">시부야 PARCO · 미야시타 파크</div>
+          <div class="tl-desc">시부야 PARCO의 닌텐도 도쿄, Pokémon Center 등. 미야시타 파크 옥상 산책. 시간 짧으면 둘 중 하나만.</div>
+          <div class="tl-meta">
+            <span class="tl-tag">신상</span>
+          </div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-time">17:00 — 18:00</div>
+          <div class="tl-title">🍨 파르페 ① · 시부야 니시무라 후르츠 팔러</div>
+          <div class="tl-desc">
+            시부야역 도보 1분. 도겐자카점. 1년에 7번 메뉴 갱신, <strong>5월 말은 멜론 시즌</strong>.<br>
+            고급 과일 가게 직영이라 과일 자체 퀄리티가 다름. 혼자 카운터석에서 천천히.
+          </div>
+          <div class="tl-loc">
+            <strong>📍</strong> 시부야구 도겐자카 2-29-12 · 10:30–23:00 · 약 1,500~2,000엔
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">파르페</span>
+          </div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-time">19:30</div>
+          <div class="tl-title">🍣 솔로 가성비 스시 저녁</div>
+          <div class="tl-desc">
+            <strong>우오베이(魚べい) 시부야 도겐자카점</strong> 추천 — 회전초밥인데 터치패드 주문, 1접시 110엔~. 1인 1,500~2,500엔으로 배부르게.<br>
+            혼자라 부담 없이 자기 페이스대로. 주영이 토요일에 본격 스시 먹기 전 가벼운 워밍업.
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">가성비 스시</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">21:30</div>
+          <div class="tl-title">호텔 복귀</div>
+          <div class="tl-desc">내일 솔로 마지막 + 주영 마중. 충전 모드.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- DAY 3 -->
+    <!-- ============================================ -->
+    <div class="day">
+      <div class="day-header">
+        <div class="day-date"><span class="day-number">D3</span> &nbsp; 5/29 금요일</div>
+        <div class="day-style">공격형</div>
+      </div>
+      <p class="day-tagline">— 쇼군버거, 파르페, 그리고 주영을 기다리는 저녁.</p>
+
+      <div class="alert-box">
+        <strong>오늘의 미션</strong> — 21시 주영 도착. 저녁 포장은 18:30~19:00 픽업 권장.
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item food">
+          <div class="tl-time">09:00</div>
+          <div class="tl-title">다이칸야마 마지막 모닝</div>
+          <div class="tl-desc"><strong>Ivy Place</strong> 브런치 또는 <strong>KASHIYAMA DAIKANYAMA</strong> B1 카페에서 마지막 커피. 동네 분위기 마무리.</div>
+          <div class="tl-meta">
+            <span class="tl-tag">카페</span>
+          </div>
+        </div>
+
+        <div class="tl-item move">
+          <div class="tl-time">10:30 — 11:30</div>
+          <div class="tl-title">체크아웃 → APA 롯본기 짐 보관</div>
+          <div class="tl-desc">
+            오하시 카이칸 체크아웃, 캐리어 들고 이동. 이케지리오하시역 → 시부야 → 도쿄메트로 히비야선 → <strong>롯본기역</strong> (총 약 30~35분, 약 360엔).<br>
+            APA에 짐만 맡기기(체크인 전이라도 가능). 빈 몸으로 신주쿠 출발.
+          </div>
+        </div>
+
+        <div class="tl-item move">
+          <div class="tl-time">11:30</div>
+          <div class="tl-title">롯본기 → 신주쿠 이동</div>
+          <div class="tl-desc">도쿄메트로 오에도선으로 신주쿠역 약 12분, 220엔.</div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-time">12:00 — 13:30</div>
+          <div class="tl-title">🍔 SHOGUN BURGER 신주쿠 본점</div>
+          <div class="tl-desc">
+            가부키쵸 1-15-12 Piatto 빌딩 1F · 신주쿠역 도보 7분.<br>
+            와규 100% 패티, 매장 직접 제빵 번. <strong>더블 치즈 버거</strong>(소고기 맛 끝판) 또는 <strong>테리야키 시이타케 버거</strong>(자가제 데리야키 + 시이타케 풍미). 단품 1,500~2,000엔, 세트 2,500엔대.<br>
+            점심 피크 12:30~13:30 줄 가능 → <strong>12시 정각 도착</strong> 권장.
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">쇼군버거</span>
+            <span class="tl-tag">목표 달성</span>
+          </div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-time">14:00 — 15:30</div>
+          <div class="tl-title">🍨 파르페 ② · SALON BAKE &amp; TEA</div>
+          <div class="tl-desc">
+            신주쿠 NEWoMan 3F · 신주쿠역 새남쪽 출구 직결.<br>
+            아파렐 브랜드 Salon adam et ropé 부설 카페. <strong>시즈널 파르페</strong>로 유명, 5월 말은 멜론·체리 시즌. 단품 2,100~2,500엔.<br>
+            인기 매장이라 정리권 발급 — 평일 오후가 그나마 여유.
+          </div>
+          <div class="tl-loc">
+            <strong>📍</strong> 신주쿠 4-1-6 NEWoMan 3F · 평일 11:00–20:30 (L.O. 19:00)
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">파르페</span>
+          </div>
+        </div>
+
+        <div class="tl-item key">
+          <div class="tl-time">15:45 — 17:00</div>
+          <div class="tl-title">🛍️ 일본 과자 1차 쇼핑 · 이세탄 신주쿠 B1</div>
+          <div class="tl-desc">
+            신주쿠 산초메 이세탄 본점 지하 1층 데파치카. 도쿄 디저트의 결정판.<br>
+            피에르 에르메 마카롱, 에쉬레 버터 샌드, 도쿄 바나나, 헨리 르 룩스 캬라멜, 시세이도 파라 비스킷 등. 무게 의식하며 픽업.
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag">과자 쇼핑</span>
+          </div>
+        </div>
+
+        <div class="tl-item move">
+          <div class="tl-time">17:15</div>
+          <div class="tl-title">신주쿠 → 롯본기 복귀 + APA 체크인</div>
+          <div class="tl-desc">오에도선 약 12분. 체크인, 짐 정리, 샤워.</div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-time">18:30 — 19:00</div>
+          <div class="tl-title">🥡 주영 저녁 포장 픽업</div>
+          <div class="tl-desc">
+            <strong>롯본기 힐즈 B2F 푸드홀</strong>이 1순위 — 스시 모리아와세 세트, 야키토리, 도시락류 다양. 와이프가 스시 좋아하니까 <strong>스시 세트 2인분</strong> 추천.<br>
+            대안: 아자부주반 상점가(도보 10분, 로컬 가게).
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">와이프 픽 · 스시</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">19:30</div>
+          <div class="tl-title">호텔에서 정리 + 주영 대기</div>
+          <div class="tl-desc">방 세팅, 포장 저녁 식탁 차리기, 와인 한 병 미리 룸서비스로 시켜둘 수도.</div>
+        </div>
+
+        <div class="tl-item key">
+          <div class="tl-time">21:00</div>
+          <div class="tl-title">🎉 송주영 도착 · 호텔 저녁</div>
+          <div class="tl-desc">주영이 나리타 7시 도착 → 호텔까지 약 2시간. 이동 피로 있으니 첫날은 호텔에서 편하게.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- DAY 4 + DAY 5 -->
+  <!-- ============================================ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-label">Day-by-day · Part 2 — Duo</div>
+      <h2 class="section-title">일정 · 듀오</h2>
+    </div>
+
+    <div class="day">
+      <div class="day-header">
+        <div class="day-date"><span class="day-number">D4</span> &nbsp; 5/30 토요일</div>
+        <div class="day-style">공격형</div>
+      </div>
+      <p class="day-tagline">— 장어, 파르페, 야키니쿠. 모든 게 다 있는 하루.</p>
+
+      <div class="alert-box">
+        <strong>예약 필수</strong> — 토요일 저녁 야키니쿠는 1~2일 전 예약. Parfaiteria beL도 인스타로 영업 확인. 장어덮밥집(아카사카 후키누키)은 점심 줄 가능, 11:30 도착 권장.
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item food">
+          <div class="tl-time">08:00</div>
+          <div class="tl-title">롯본기 모닝 브런치</div>
+          <div class="tl-desc"><strong>Bricolage Bread &amp; Co.</strong>(롯본기 6초메, 베이커리 카페) 또는 호텔 근처 카페. 점심 장어덮밥이 무거우니까 아침은 빵·커피로 가볍게.</div>
+          <div class="tl-meta">
+            <span class="tl-tag">카페</span>
+          </div>
+        </div>
+
+        <div class="tl-item key">
+          <div class="tl-time">09:30 — 11:00</div>
+          <div class="tl-title">아자부다이 힐즈 (2023 신상)</div>
+          <div class="tl-desc">
+            롯본기 도보 10분. 모리 빌딩 신복합단지, 일본 최고층 빌딩(330m) <strong>모리 JP 타워</strong> 포함. 도쿄에서 가본 적 적은 곳 ✓<br>
+            팀랩 보더리스(예약 권장), 정원, 갤러리, 디자인 숍. 사진 명소 많음.
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">롯본기 신상</span>
+            <span class="tl-tag">사진</span>
+          </div>
+        </div>
+
+        <div class="tl-item move">
+          <div class="tl-time">11:15</div>
+          <div class="tl-title">아카사카로 이동</div>
+          <div class="tl-desc">롯본기에서 도쿄메트로 한 정거장, 또는 도보 15분.</div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-time">11:30 — 13:00</div>
+          <div class="tl-title">🍱 장어덮밥 점심 · 아카사카 후키누키 (赤坂 ふきぬき)</div>
+          <div class="tl-desc">
+            <strong>미슐랭 빕구르망 인증</strong>(가성비 맛집 인증). 도쿄 100년+ 노포.<br>
+            추천: <strong>우나주(うな重) 매(梅)</strong> 2,800엔대 — 부드러운 식감 + 깊은 데리야키 소스. 우나주 송(松)은 3,500엔대.<br>
+            점심 영업 11:30~14:00 · 토요일 줄 있을 수 있으니 11:30 정각 도착 권장.
+          </div>
+          <div class="tl-loc">
+            <strong>📍</strong> 미나토구 아카사카 3-9-9 · 롯본기에서 지하철 1정거장(아카사카역 도보 5분)
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">주영 미션 · 장어</span>
+          </div>
+        </div>
+
+        <div class="tl-item move">
+          <div class="tl-time">13:30</div>
+          <div class="tl-title">시부야 이동</div>
+          <div class="tl-desc">아카사카 → 도쿄메트로 → 시부야 약 12분.</div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-time">14:00 — 15:30</div>
+          <div class="tl-title">🍨 파르페 ③ · Parfaiteria beL 시부야</div>
+          <div class="tl-desc">
+            삿포로발 '시메 파르페' 인기점. 도쿄 3개 매장 중 시부야점.<br>
+            예술적인 비주얼 + 어른용 술 페어링 가능. 모던한 디자이너 파르페. 와이프와 인생샷 보장.
+          </div>
+          <div class="tl-loc">
+            <strong>📍</strong> 시부야 도겐자카 인근 · 사전 예약 권장(인스타 @parfaiteriabel_shibuya 확인)
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">파르페 · 와이프♥</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">16:00 — 18:00</div>
+          <div class="tl-title">시부야 신상 + 캣 스트리트 산책</div>
+          <div class="tl-desc">
+            <strong>시부야 사쿠라 스테이지</strong>(2024 오픈, 시부야 신 랜드마크), <strong>미야시타 파크 옥상</strong>, <strong>시부야 PARCO</strong>(Nintendo Tokyo, Pokemon Center).<br>
+            여유 시간 — 캣 스트리트 따라 하라주쿠 쪽 천천히 산책. 빈티지샵, 편집숍, 카페.
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag">신상</span>
+            <span class="tl-tag">산책</span>
+          </div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-time">19:30 — 21:30</div>
+          <div class="tl-title">🥩 야키니쿠 저녁 (예약 필수)</div>
+          <div class="tl-desc">
+            와이프 픽! 시부야·에비스권 가성비 좋은 야키니쿠 추천 3곳:<br>
+            · <strong>야키니쿠 정육식당(焼肉 精肉食堂)</strong> 시부야 — 와규 가성비, 1인 4,000~6,000엔<br>
+            · <strong>잇피카(一品香) 시부야</strong> — 깔끔한 분위기, 1인 5,000~7,000엔<br>
+            · <strong>규카쿠(牛角) 프리미엄 시부야</strong> — 체인이지만 퀄리티 안정적, 1인 3,500~5,000엔<br>
+            토요일 저녁은 예약 권장. Google 또는 Tabelog에서 직접 예약 가능.
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">와이프 픽 · 야키니쿠</span>
+            <span class="tl-tag">예약 필수</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">22:00</div>
+          <div class="tl-title">롯본기 복귀 · 야경 한잔</div>
+          <div class="tl-desc">롯본기 힐즈 야경 산책. 에너지 남으면 미드타운 근처 바에서 가볍게 한 잔.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- DAY 5 -->
+    <!-- ============================================ -->
+    <div class="day">
+      <div class="day-header">
+        <div class="day-date"><span class="day-number">D5</span> &nbsp; 5/31 일요일</div>
+        <div class="day-style">공격형</div>
+      </div>
+      <p class="day-tagline">— 마지막 파르페와 가벼운 작별.</p>
+
+      <div class="alert-box">
+        <strong>시간 압박</strong> — 비행 20:10 / 호텔 출발 데드라인 <strong>15:30</strong> / 신주쿠 출발 데드라인 <strong>16:00</strong>. 짐 아침에 미리 다 싸두기.
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time">07:30</div>
+          <div class="tl-title">기상 + 짐 정리</div>
+          <div class="tl-desc">캐리어 다 싸서 호텔에 짐 보관(오후에 픽업). 가벼운 몸으로 출발.</div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-time">09:00 — 10:30</div>
+          <div class="tl-title">오모테산도 일요일 모닝</div>
+          <div class="tl-desc">
+            롯본기 → 오모테산도 도쿄메트로 5분. 일요일 아침의 오모테산도 가로수길은 도쿄에서 가장 평화로운 동네 중 하나.<br>
+            <strong>Fuglen Tokyo</strong>(노르웨이 스페셜티 커피) 또는 <strong>% Arabica 오모테산도</strong> 추천. 가볍게 산책 + 커피.
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag">카페</span>
+          </div>
+        </div>
+
+        <div class="tl-item move">
+          <div class="tl-time">10:45</div>
+          <div class="tl-title">신주쿠 이동</div>
+          <div class="tl-desc">오모테산도 → 메이지진구마에 → JR 야마노테선 → 신주쿠역 (총 약 15분).</div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-time">11:30 — 13:00</div>
+          <div class="tl-title">🍣 가성비 스시 점심 · 우오베이 시부야 도겐자카</div>
+          <div class="tl-desc">
+            잠깐, 시부야로 한 번 더 — 사실 신주쿠보다 우오베이가 더 가성비.<br>
+            <strong>우오베이(魚べい)</strong>는 회전초밥 체인 중 퀄리티 최상위. 터치패드 주문, 초고속 레일 서빙. 1접시 110엔~. 인기 메뉴: 참치 대뱃살, 우니, 연어 토로, 가리비.<br>
+            1인 1,500~2,500엔으로 배부르게. 빠르게 먹고 일어날 수 있어 오늘 같은 날 최적.
+          </div>
+          <div class="tl-loc">
+            <strong>📍</strong> 시부야구 도겐자카 2-29-11 · 시부야역 도보 3분 · 11:00–23:00
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">가성비 스시</span>
+          </div>
+        </div>
+
+        <div class="tl-item food">
+          <div class="tl-time">13:30 — 14:30</div>
+          <div class="tl-title">🍨 파르페 ④ · 시부야 마지막 디저트</div>
+          <div class="tl-desc">
+            점심 우오베이 도보 1분 → <strong>시부야 니시무라 후르츠 팔러 도겐자카점</strong> (D2에서 솔로로 갔던 곳, 주영이랑 한 번 더).<br>
+            과일 종류가 매주 바뀌니까 D2 때와 다른 시즈널 메뉴 있을 가능성. 마지막 도쿄 디저트.
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">파르페 · 마지막</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">14:30 — 15:00</div>
+          <div class="tl-title">🛍️ 일본 과자 마지막 쇼핑 · 시부야</div>
+          <div class="tl-desc">
+            <strong>시부야 스크램블 스퀘어 B1~B2 식품관</strong> 또는 <strong>시부야 히카리에 B2 ShinQs</strong>. 도쿄 바나나, 킷캣 한정, 시즌 디저트 등 한국 가져갈 거 빠르게.<br>
+            위탁 15kg 한도 의식하며 가볍게.
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag">과자 쇼핑</span>
+          </div>
+        </div>
+
+        <div class="tl-item move">
+          <div class="tl-time">15:15 — 15:45</div>
+          <div class="tl-title">호텔 복귀 → 짐 픽업 → 체크아웃</div>
+          <div class="tl-desc">시부야 → 도쿄메트로 히비야선 → 롯본기 약 8분. 짐 정리 15분, 체크아웃 5분.</div>
+        </div>
+
+        <div class="tl-item move">
+          <div class="tl-time">15:45 — 17:45</div>
+          <div class="tl-title">🚆 도쿄역 → N'EX → 나리타 T1</div>
+          <div class="tl-desc">
+            <strong>1) 롯본기역 → 도쿄역</strong> · 오에도선 → 도쿄역 (대수산역에서 환승, 약 20분).<br>
+            <strong>2) 도쿄역 N'EX 탑승</strong> · 16:33 또는 17:03 차편 추천(예매 권장). 도쿄역 → 나리타 T1 약 60분.<br>
+            <strong>3) 17:30~17:45 나리타 T1 도착</strong>.
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">데드라인</span>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">17:45 — 19:30</div>
+          <div class="tl-title">나리타 T1 체크인 · 면세 쇼핑</div>
+          <div class="tl-desc">RS0704 체크인 카운터, 보안 검색, 출국 심사. 시간 30~40분 여유 있으면 면세점에서 마지막 일본 과자 픽업 가능.</div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">20:10</div>
+          <div class="tl-title">NRT 출발</div>
+          <div class="tl-desc">22:50 ICN T2 도착. 비행시간 2시간 40분.</div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-time">22:50</div>
+          <div class="tl-title">집으로</div>
+          <div class="tl-desc">짐 찾고 입국. 늦은 시간이라 공항 리무진/택시 확인.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOD GUIDE -->
+  <!-- ============================================ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-label">Eats</div>
+      <h2 class="section-title">맛집 모음</h2>
+      <p class="section-intro">이번 여행에서 꼭 가야 할 가게들. 너무 비싼 곳은 빼고 가성비·맛 균형으로.</p>
+    </div>
+
+    <div class="food-grid">
+
+      <div class="food-card">
+        <div class="food-card-head">
+          <div class="food-category">장어덮밥</div>
+          <span class="food-pill">주영 미션 · 토 점심</span>
+        </div>
+        <div class="food-list">
+          <div class="food-row">
+            <div class="food-row-num">01</div>
+            <div>
+              <div class="food-row-name">아카사카 후키누키 (赤坂 ふきぬき)</div>
+              <div class="food-row-jp">Akasaka Fukinuki · 미슐랭 빕구르망</div>
+              <div class="food-row-desc">노포 분위기 + 가성비 인증. 우나주 매(梅) 약 2,800엔, 송(松) 약 3,500엔. 점심 11:30~14:00. 미나토구 아카사카 3-9-9. 롯본기 지하철 1정거장.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-head">
+          <div class="food-category">가성비 스시</div>
+          <span class="food-pill">화금토일</span>
+        </div>
+        <div class="food-list">
+          <div class="food-row">
+            <div class="food-row-num">01</div>
+            <div>
+              <div class="food-row-name">우오베이 시부야 도겐자카점</div>
+              <div class="food-row-jp">魚べい · 회전초밥</div>
+              <div class="food-row-desc">터치패드 + 초고속 레일. 1접시 110엔~. 가성비 최고. 1인 1,500~2,500엔으로 배부르게. 시부야역 도보 3분. <strong>D5 점심 추천</strong>.</div>
+            </div>
+          </div>
+          <div class="food-row">
+            <div class="food-row-num">02</div>
+            <div>
+              <div class="food-row-name">스시잔마이 츠키지 본점</div>
+              <div class="food-row-jp">すしざんまい · 24시간</div>
+              <div class="food-row-desc">대중적인 스시 체인의 본점. 1인 2,500~4,000엔. 부담 없이 들어가서 메뉴 다양하게 시켜볼 수 있음.</div>
+            </div>
+          </div>
+          <div class="food-row">
+            <div class="food-row-num">03</div>
+            <div>
+              <div class="food-row-name">롯본기 힐즈 B2F 푸드홀 (D3 포장용)</div>
+              <div class="food-row-jp">テイクアウト · 백화점급</div>
+              <div class="food-row-desc">스시 모리아와세 세트 2인분 약 5,000~7,000엔. 퀄리티 안정. <strong>D3 주영 도착일 저녁 포장</strong>.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-head">
+          <div class="food-category">야키니쿠</div>
+          <span class="food-pill">토 저녁 · 예약 필수</span>
+        </div>
+        <div class="food-list">
+          <div class="food-row">
+            <div class="food-row-num">01</div>
+            <div>
+              <div class="food-row-name">야키니쿠 정육식당 시부야</div>
+              <div class="food-row-jp">焼肉 精肉食堂 · 와규 가성비</div>
+              <div class="food-row-desc">와규 부위별 셀렉트 가능, 1인 4,000~6,000엔. 토요일 저녁 예약 권장.</div>
+            </div>
+          </div>
+          <div class="food-row">
+            <div class="food-row-num">02</div>
+            <div>
+              <div class="food-row-name">잇피카 시부야</div>
+              <div class="food-row-jp">一品香 · 깔끔한 분위기</div>
+              <div class="food-row-desc">와이프와 갈 만한 분위기. 1인 5,000~7,000엔. 한국어 메뉴 있음.</div>
+            </div>
+          </div>
+          <div class="food-row">
+            <div class="food-row-num">03</div>
+            <div>
+              <div class="food-row-name">규카쿠 프리미엄 시부야</div>
+              <div class="food-row-jp">牛角プレミアム · 안정적 체인</div>
+              <div class="food-row-desc">체인이지만 프리미엄 라인은 퀄리티 좋음. 1인 3,500~5,000엔. 한국어 메뉴 안정.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-head">
+          <div class="food-category">파르페</div>
+          <span class="food-pill">이번 여행 메인 테마</span>
+        </div>
+        <div class="food-list">
+          <div class="food-row">
+            <div class="food-row-num">①</div>
+            <div>
+              <div class="food-row-name">시부야 니시무라 후르츠 팔러 (도겐자카점)</div>
+              <div class="food-row-jp">渋谷西村フルーツパーラー · 솔로 D2 / 듀오 D5</div>
+              <div class="food-row-desc">고급 과일 가게 직영. 1년 7번 메뉴 갱신. 5월 말은 멜론 시즌. 1,500~2,000엔. 시부야역 도보 1분.</div>
+            </div>
+          </div>
+          <div class="food-row">
+            <div class="food-row-num">②</div>
+            <div>
+              <div class="food-row-name">SALON BAKE &amp; TEA</div>
+              <div class="food-row-jp">サロン ベイク アンド ティー · 솔로 D3</div>
+              <div class="food-row-desc">신주쿠 NEWoMan 3F · 신주쿠역 직결. 시즈널 디자이너 파르페 2,100~2,500엔. 정리권 발급제.</div>
+            </div>
+          </div>
+          <div class="food-row">
+            <div class="food-row-num">③</div>
+            <div>
+              <div class="food-row-name">Parfaiteria beL 시부야</div>
+              <div class="food-row-jp">パフェテリア ベル · 듀오 D4</div>
+              <div class="food-row-desc">삿포로발 시메 파르페 인기점. 어른용 술 페어링 가능. 인스타 @parfaiteriabel_shibuya 영업 확인 + 예약.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-head">
+          <div class="food-category">쇼군버거</div>
+          <span class="food-pill">금 점심 · 솔로</span>
+        </div>
+        <div class="food-list">
+          <div class="food-row">
+            <div class="food-row-num">01</div>
+            <div>
+              <div class="food-row-name">SHOGUN BURGER 신주쿠 본점</div>
+              <div class="food-row-jp">ショーグンバーガー · 와규 100% 패티</div>
+              <div class="food-row-desc">가부키쵸 1-15-12 Piatto 빌딩 1F. 신주쿠역 도보 7분. 더블 치즈 1,500~2,000엔. 점심 피크 전 12시 정각 도착 권장.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SHOPPING -->
+  <!-- ============================================ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-label">Shopping</div>
+      <h2 class="section-title">일본 과자 쇼핑</h2>
+      <p class="section-intro">큰 쇼핑은 없고 일본 과자 위주. 위탁 15kg 한도 고려해서 분산 픽업.</p>
+    </div>
+
+    <div class="shop-grid">
+
+      <div class="shop-section">
+        <div class="shop-section-title">어디서 살까</div>
+        <ul class="shop-list">
+          <li><strong>이세탄 신주쿠 본점 B1</strong> · 데파치카 — 도쿄 디저트 결정판. 피에르 에르메, 에쉬레, 헨리 르 룩스 등. <em>D3 솔로 일정에서 1차 쇼핑.</em></li>
+          <li><strong>시부야 스크램블 스퀘어 B1~B2</strong> · 시부야 식품관 — 도쿄 바나나, 시즌 한정. <em>D5 마지막 쇼핑.</em></li>
+          <li><strong>시부야 히카리에 B2 ShinQs</strong> · 큐레이션 좋음.</li>
+          <li><strong>나리타 공항 면세점 / 기념품점</strong> · 출국 마지막 픽업. 시간 여유 있으면.</li>
+          <li><strong>편의점 (세븐일레븐 / 패밀리마트 / 로손)</strong> · 한정판 과자 수시로 체크. 가성비 최고.</li>
+        </ul>
+      </div>
+
+      <div class="shop-section">
+        <div class="shop-section-title">추천 품목</div>
+        <ul class="shop-list">
+          <li><strong>킷캣 일본 한정</strong> · 말차, 와사비, 사케, 도쿄 한정. 편의점에서도 가능.</li>
+          <li><strong>도쿄 바나나</strong> · 클래식 시즌 한정 맛도 있음.</li>
+          <li><strong>로이스 초콜릿</strong> · 생초콜릿, 포테이토칩 초콜릿 (인기).</li>
+          <li><strong>에쉬레 버터 샌드</strong> · 신주쿠 이세탄 한정 — 시즌 따라 줄 있음.</li>
+          <li><strong>피에르 에르메 마카롱</strong> · 신주쿠 이세탄.</li>
+          <li><strong>요쿠모쿠 시가렛 쿠키</strong> · 격조있는 선물용.</li>
+          <li><strong>하라다 라스크</strong> · 가성비 좋은 선물용.</li>
+          <li><strong>토라야 양갱</strong> · 전통 화과자 입문용.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- TRANSPORT -->
+  <!-- ============================================ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-label">Getting around</div>
+      <h2 class="section-title">교통 가이드</h2>
+      <p class="section-intro">공항과 호텔을 잇는 가장 효율적인 루트. 짐 들고 헤매지 않도록.</p>
+    </div>
+
+    <!-- ICN → Hotel -->
+    <div class="transport-card">
+      <div class="transport-head">
+        <div class="transport-dir">5/27 수 · 도착</div>
+        <div class="transport-route-title">NRT T1 → 오하시 카이칸 호텔</div>
+        <div class="transport-duration">≈ 100분</div>
+      </div>
+
+      <div class="step-list">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <div class="step-name">NRT T1 도착 → 입국 수속 (약 30~40분)</div>
+            <div class="step-detail">진에어는 NRT T1 도착. 외국인 입국 줄 30~40분 예상. <strong>Visit Japan Web</strong> 사전 등록하면 QR로 빠르게 통과.</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <div class="step-name">T1 지하 1층 JR 카운터로 이동 (도보 5분)</div>
+            <div class="step-detail">도착장에서 표지판 "JR / N'EX" 따라 B1F로. JR 동일본 외국인 카운터에서 N'EX 티켓 구매. <strong>여권 필수</strong>.</div>
+            <div class="step-cost">왕복 5,000엔 (외국인 한정, 편도 3,250엔)</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <div class="step-name">N'EX 시부야행 탑승 (약 80분)</div>
+            <div class="step-detail">10:50~11:50 사이 시부야행 차편 운행. 좌석 지정. 짐 보관함 풍부.</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <div class="step-name">시부야역 → 이케지리오하시역 (약 3분)</div>
+            <div class="step-detail">시부야역에서 <strong>도큐 덴엔토시선</strong>으로 환승, 1정거장. 표지판 따라 도쿄 메트로 또는 도큐 라인 게이트.</div>
+            <div class="step-cost">180엔 (IC카드)</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">05</div>
+          <div class="step-content">
+            <div class="step-name">이케지리오하시역 → 호텔 (도보 약 7분)</div>
+            <div class="step-detail">남쪽 출구로 나와 직진. 호텔 도착 후 짐 보관(체크인 16시 이전이라도 가능).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hotel A → Hotel B -->
+    <div class="transport-card">
+      <div class="transport-head">
+        <div class="transport-dir">5/29 금 · 호텔 이동</div>
+        <div class="transport-route-title">오하시 카이칸 → APA 롯본기 Six</div>
+        <div class="transport-duration">≈ 35분</div>
+      </div>
+
+      <div class="step-list">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <div class="step-name">오하시 카이칸 체크아웃 (10:00)</div>
+            <div class="step-detail">짐 정리 + 체크아웃. 이케지리오하시역까지 도보 7분.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <div class="step-name">이케지리오하시 → 시부야 → 롯본기</div>
+            <div class="step-detail">도큐 덴엔토시선 시부야행 1정거장 → 시부야역에서 <strong>도쿄메트로 히비야선</strong>으로 환승 → 롯본기역 약 8분.</div>
+            <div class="step-cost">360엔</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <div class="step-name">APA 롯본기 짐 보관</div>
+            <div class="step-detail">체크인 시간(보통 15시) 전이라도 짐만 맡기기 가능. 가벼운 몸으로 신주쿠 출발.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hotel → NRT -->
+    <div class="transport-card">
+      <div class="transport-head">
+        <div class="transport-dir">5/31 일 · 출국</div>
+        <div class="transport-route-title">APA 롯본기 → NRT T1</div>
+        <div class="transport-duration">≈ 100분</div>
+      </div>
+
+      <div class="step-list">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <div class="step-name">호텔 짐 픽업 + 체크아웃 (15:15~15:45)</div>
+            <div class="step-detail">아침에 다 싸둔 짐 픽업, 체크아웃. 룸 다시 확인.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <div class="step-name">롯본기 → 도쿄역 (15:45)</div>
+            <div class="step-detail">도쿄메트로 <strong>오에도선</strong> 롯본기역 → 다이몬역 환승 → 도쿄역(약 20분). 또는 히비야선 → 카스미가세키 환승.</div>
+            <div class="step-cost">220엔</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <div class="step-name">도쿄역 → 나리타 T1 (N'EX 약 60분)</div>
+            <div class="step-detail">N'EX 16:33 또는 17:03 차편 추천. 사전 예매 가능(JR 동일본 앱).</div>
+            <div class="step-cost">왕복권 사용 시 추가 0엔</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <div class="step-name">나리타 T1 도착 (17:30~17:45)</div>
+            <div class="step-detail">RS0704 체크인 카운터 → 보안 → 출국 심사 → 면세 쇼핑. 비행 출발 20:10.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- City transit tips -->
+    <div class="transport-card">
+      <div class="transport-head">
+        <div class="transport-dir">팁</div>
+        <div class="transport-route-title">도쿄 시내 이동</div>
+      </div>
+
+      <div class="step-list">
+        <div class="step">
+          <div class="step-num">·</div>
+          <div class="step-content">
+            <div class="step-name">IC 카드 (Suica / PASMO)</div>
+            <div class="step-detail">스마트폰에 등록(Apple Pay/Google Pay)하면 충전·결제 한 번에. 지하철·버스·편의점·자판기 모두 사용.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">·</div>
+          <div class="step-content">
+            <div class="step-name">구글 맵 익숙해지기</div>
+            <div class="step-detail">도쿄 지하철은 라인별 색 + 출구 번호 시스템. 출구 번호 확인하면 헤매지 않음.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">·</div>
+          <div class="step-content">
+            <div class="step-name">택시는 비싸지만 편함</div>
+            <div class="step-detail">기본요금 500엔, 짐 많거나 비 오는 날 짧은 거리는 OK. JapanTaxi 또는 GO 앱.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CHECKLIST -->
+  <!-- ============================================ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-label">Before we go</div>
+      <h2 class="section-title">체크리스트</h2>
+    </div>
+
+    <div class="check-grid">
+
+      <div class="check-section">
+        <div class="check-section-title">예약 / 사전 확인</div>
+        <div class="check-list">
+          <div class="check-item">N'EX 외국인 왕복권(5,000엔) — JR 동일본 외국인 카운터 또는 사전 온라인</div>
+          <div class="check-item">Visit Japan Web 사전 등록(입국 QR)</div>
+          <div class="check-item"><strong>토요일 야키니쿠</strong> 1~2일 전 예약 (시부야, Tabelog 또는 Google)</div>
+          <div class="check-item"><strong>Parfaiteria beL 시부야</strong> 인스타로 영업일/예약 확인</div>
+          <div class="check-item"><strong>아카사카 후키누키 장어덮밥</strong> 토요일 점심 줄 가능 — 11:30 정각 도착 권장</div>
+          <div class="check-item"><strong>SALON BAKE &amp; TEA</strong> 정리권 발급제 — 평일 오후 노리기</div>
+          <div class="check-item"><strong>SHOGUN BURGER</strong> 12시 정각 도착으로 피크 회피</div>
+        </div>
+      </div>
+
+      <div class="check-section">
+        <div class="check-section-title">챙길 것</div>
+        <div class="check-list">
+          <div class="check-item">여권 (만료일 6개월 이상 확인)</div>
+          <div class="check-item">e-Ticket 출력 또는 캡처 (LJ0201 / RS0704)</div>
+          <div class="check-item">호텔 바우처 (오하시 카이칸 / APA 롯본기)</div>
+          <div class="check-item">엔화 현금 (대부분 카드 OK, 시장·소형점 대비 5만엔 정도)</div>
+          <div class="check-item">스마트폰 IC카드 (Suica/PASMO) 등록</div>
+          <div class="check-item">eSIM 또는 포켓 와이파이</div>
+          <div class="check-item">110V 변환 어댑터(2구 핀 형태, 일본은 110V/50-60Hz)</div>
+          <div class="check-item">우산 (5월 말 도쿄 일교차 + 소나기 가능)</div>
+          <div class="check-item">위탁 15kg 빈 여유분 — 일본 과자용</div>
+        </div>
+      </div>
+
+      <div class="check-section">
+        <div class="check-section-title">주영이용 메모</div>
+        <div class="check-list">
+          <div class="check-item">금요일 7시 NRT 도착 → 호텔까지 약 2시간 → 9시 호텔 도착</div>
+          <div class="check-item">경준이가 저녁 포장해서 호텔에서 기다림 — 스시 세트</div>
+          <div class="check-item">호텔: <strong>APA 롯본기 Six</strong> · 미나토구 롯본기 · 롯본기역 도보권</div>
+          <div class="check-item">토요일 메인 미션: 장어덮밥 + 파르페 + 야키니쿠</div>
+          <div class="check-item">일요일 비행: 20:10 NRT 출발 — 15:30 호텔 출발 사수</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="doc-footer">
+    <p>made with care for our days in Tokyo</p>
+    <div class="seal">5.27 — 5.31</div>
+  </footer>
+
+</article>
+
+</body>
+</html>
