@@ -579,6 +579,146 @@
     font-weight: 500;
   }
 
+  /* ---------- Map links ---------- */
+  a.map-link,
+  a.tl-loc-link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--accent);
+    transition: all 0.15s;
+    cursor: pointer;
+  }
+  a.map-link:hover,
+  a.tl-loc-link:hover {
+    color: var(--accent);
+    border-bottom-style: solid;
+  }
+  a.tl-loc-link {
+    color: var(--accent);
+  }
+  a.food-row-link,
+  a.hotel-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: opacity 0.15s, background 0.15s;
+    border-radius: 4px;
+    padding: 8px;
+    margin: -8px;
+  }
+  a.food-row-link:hover,
+  a.hotel-link:hover {
+    background: var(--bg-soft);
+  }
+  a.hotel-link {
+    display: block;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+  }
+  a.hotel-link:hover .hotel-card-name {
+    color: var(--accent);
+  }
+  .hotel-card-name {
+    transition: color 0.15s;
+  }
+  .map-pin {
+    display: inline-block;
+    font-size: 9px;
+    margin-left: 5px;
+    opacity: 0.5;
+    vertical-align: middle;
+  }
+
+  /* ---------- Course cards ---------- */
+  .course-card {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 22px;
+    margin-bottom: 16px;
+  }
+  .course-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+  .course-tag {
+    font-family: var(--serif);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .course-title {
+    font-family: var(--serif);
+    font-size: 17px;
+    font-weight: 500;
+    flex: 1;
+  }
+  .course-duration {
+    font-size: 12px;
+    color: var(--ink-mute);
+    font-family: var(--serif);
+  }
+  .course-tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin: 10px 0 14px;
+  }
+  .course-stops {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .course-stop {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px 8px;
+    margin: 0 -8px;
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+  .course-stop:hover {
+    background: var(--bg-soft);
+  }
+  .course-stop-num {
+    font-family: var(--serif);
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 500;
+    min-width: 22px;
+    padding-top: 2px;
+  }
+  .course-stop-content { flex: 1; }
+  .course-stop-name {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    color: var(--ink);
+    transition: color 0.15s;
+  }
+  .course-stop:hover .course-stop-name {
+    color: var(--accent);
+  }
+  .course-stop-desc {
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
   /* ---------- Print ---------- */
   @media print {
     body { background: white; padding: 0; }
@@ -664,22 +804,26 @@
     </div>
 
     <div class="hotel-stack">
-      <div class="hotel-card">
-        <div class="hotel-card-when">5/27 (수) — 5/29 (금) · 솔로</div>
-        <div class="hotel-card-name">Hotel Residence Ohashi Kaikan</div>
-        <div class="hotel-card-info">
-          도쿄 메구로구 오하시 · 이케지리오하시역 도보 7분 · 체크인 16:00<br>
-          다이칸야마·나카메구로 도보권. 시부야까지 한 정거장.
+      <a class="hotel-link" href="https://www.google.com/maps/search/?api=1&query=Hotel+Residence+Ohashi+Kaikan" target="_blank">
+        <div class="hotel-card">
+          <div class="hotel-card-when">5/27 (수) — 5/29 (금) · 솔로</div>
+          <div class="hotel-card-name">Hotel Residence Ohashi Kaikan</div>
+          <div class="hotel-card-info">
+            도쿄 메구로구 오하시 · 이케지리오하시역 도보 7분 · 체크인 16:00<br>
+            다이칸야마·나카메구로 도보권. 시부야까지 한 정거장.
+          </div>
         </div>
-      </div>
-      <div class="hotel-card">
-        <div class="hotel-card-when">5/29 (금) — 5/31 (일) · 듀오</div>
-        <div class="hotel-card-name">APA 호텔 롯본기 Six</div>
-        <div class="hotel-card-info">
-          미나토구 롯본기 · 롯본기역 도보권<br>
-          롯본기 힐즈·미드타운·아자부다이 힐즈 모두 도보권. 시부야·신주쿠 지하철 빠름.
+      </a>
+      <a class="hotel-link" href="https://www.google.com/maps/search/?api=1&query=APA+Hotel+Roppongi+Six" target="_blank">
+        <div class="hotel-card">
+          <div class="hotel-card-when">5/29 (금) — 5/31 (일) · 듀오</div>
+          <div class="hotel-card-name">APA 호텔 롯본기 Six</div>
+          <div class="hotel-card-info">
+            미나토구 롯본기 · 롯본기역 도보권<br>
+            롯본기 힐즈·미드타운·아자부다이 힐즈 모두 도보권. 시부야·신주쿠 지하철 빠름.
+          </div>
         </div>
-      </div>
+      </a>
     </div>
   </section>
 
@@ -844,7 +988,7 @@
             고급 과일 가게 직영이라 과일 자체 퀄리티가 다름. 혼자 카운터석에서 천천히.
           </div>
           <div class="tl-loc">
-            <strong>📍</strong> 시부야구 도겐자카 2-29-12 · 10:30–23:00 · 약 1,500~2,000엔
+            <a class="tl-loc-link" href="https://www.google.com/maps/search/?api=1&query=시부야+니시무라+후르츠+팔러+도겐자카점" target="_blank"><strong>📍</strong> 시부야구 도겐자카 2-29-12</a> · 10:30–23:00 · 약 1,500~2,000엔
           </div>
           <div class="tl-meta">
             <span class="tl-tag mark">파르페</span>
@@ -863,10 +1007,27 @@
           </div>
         </div>
 
+        <div class="tl-item food">
+          <div class="tl-time">22:30 — 23:30</div>
+          <div class="tl-title">🍜 신주쿠 골든가이 심야 라멘 · 凪 (나기)</div>
+          <div class="tl-desc">
+            우오베이에서 시부야 → 도쿄메트로 후쿠토신선/신주쿠선 신주쿠 약 10분.<br>
+            신주쿠 골든가이 좁은 골목 안쪽 2층. <strong>24시간 영업</strong>. 시그니처는 <strong>니보시(말린 정어리) 라멘</strong> — 진하고 묵직한 멸치 국물에 두꺼운 면. 1,000~1,500엔.<br>
+            좁은 카운터 + 어두운 분위기 = 도쿄 심야의 정수. 솔로로 가야 더 맛있는 곳.
+          </div>
+          <div class="tl-loc">
+            <a class="tl-loc-link" href="https://www.google.com/maps/search/?api=1&query=라멘+나기+신주쿠+골든가이" target="_blank"><strong>📍</strong> 신주쿠 1-1-10 골든가이 2F</a> · 24시간 · 1,000~1,500엔
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag mark">심야 라멘 · 솔로</span>
+            <span class="tl-tag">24시간</span>
+          </div>
+        </div>
+
         <div class="tl-item">
-          <div class="tl-time">21:30</div>
+          <div class="tl-time">24:00</div>
           <div class="tl-title">호텔 복귀</div>
-          <div class="tl-desc">내일 솔로 마지막 + 주영 마중. 충전 모드.</div>
+          <div class="tl-desc">신주쿠 → 시부야 → 이케지리오하시. 심야 택시 옵션도. 내일 솔로 마지막 + 주영 마중.</div>
         </div>
       </div>
     </div>
@@ -933,7 +1094,7 @@
             인기 매장이라 정리권 발급 — 평일 오후가 그나마 여유.
           </div>
           <div class="tl-loc">
-            <strong>📍</strong> 신주쿠 4-1-6 NEWoMan 3F · 평일 11:00–20:30 (L.O. 19:00)
+            <a class="tl-loc-link" href="https://www.google.com/maps/search/?api=1&query=SALON+BAKE+%26+TEA+NEWoMan+신주쿠" target="_blank"><strong>📍</strong> 신주쿠 4-1-6 NEWoMan 3F</a> · 평일 11:00–20:30 (L.O. 19:00)
           </div>
           <div class="tl-meta">
             <span class="tl-tag mark">파르페</span>
@@ -1043,7 +1204,7 @@
             점심 영업 11:30~14:00 · 토요일 줄 있을 수 있으니 11:30 정각 도착 권장.
           </div>
           <div class="tl-loc">
-            <strong>📍</strong> 미나토구 아카사카 3-9-9 · 롯본기에서 지하철 1정거장(아카사카역 도보 5분)
+            <a class="tl-loc-link" href="https://www.google.com/maps/search/?api=1&query=아카사카+후키누키" target="_blank"><strong>📍</strong> 미나토구 아카사카 3-9-9</a> · 롯본기에서 지하철 1정거장(아카사카역 도보 5분)
           </div>
           <div class="tl-meta">
             <span class="tl-tag mark">주영 미션 · 장어</span>
@@ -1064,7 +1225,7 @@
             예술적인 비주얼 + 어른용 술 페어링 가능. 모던한 디자이너 파르페. 와이프와 인생샷 보장.
           </div>
           <div class="tl-loc">
-            <strong>📍</strong> 시부야 도겐자카 인근 · 사전 예약 권장(인스타 @parfaiteriabel_shibuya 확인)
+            <a class="tl-loc-link" href="https://www.google.com/maps/search/?api=1&query=Parfaiteria+beL+시부야" target="_blank"><strong>📍</strong> 시부야 도겐자카 인근</a> · 사전 예약 권장(인스타 @parfaiteriabel_shibuya 확인)
           </div>
           <div class="tl-meta">
             <span class="tl-tag mark">파르페 · 와이프♥</span>
@@ -1156,7 +1317,7 @@
             1인 1,500~2,500엔으로 배부르게. 빠르게 먹고 일어날 수 있어 오늘 같은 날 최적.
           </div>
           <div class="tl-loc">
-            <strong>📍</strong> 시부야구 도겐자카 2-29-11 · 시부야역 도보 3분 · 11:00–23:00
+            <a class="tl-loc-link" href="https://www.google.com/maps/search/?api=1&query=우오베이+시부야+도겐자카점" target="_blank"><strong>📍</strong> 시부야구 도겐자카 2-29-11</a> · 시부야역 도보 3분 · 11:00–23:00
           </div>
           <div class="tl-meta">
             <span class="tl-tag mark">가성비 스시</span>
@@ -1639,6 +1800,388 @@
       </div>
 
     </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- MORE FOOD RECOMMENDATIONS -->
+  <!-- ============================================ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-label">More to taste</div>
+      <h2 class="section-title">더 추천 · 맛집</h2>
+      <p class="section-intro">기본 일정에 다 못 넣은 것들 + 시간 여유 있거나 다음 번에 가볼 만한 곳. <strong>가게 이름이나 카드를 터치하면 구글맵으로 바로 연결</strong>됩니다.</p>
+    </div>
+
+    <div class="food-grid">
+
+      <div class="food-card">
+        <div class="food-card-head">
+          <div class="food-category">라멘 · 면</div>
+          <span class="food-pill">점심/저녁/야식</span>
+        </div>
+        <div class="food-list">
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=AFURI+롯본기" target="_blank">
+            <div class="food-row-num">01</div>
+            <div>
+              <div class="food-row-name">AFURI 롯본기 (アフリ 六本木)<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">유자 시오 라멘 · 깔끔한 맛</div>
+              <div class="food-row-desc">롯본기역 도보 5분. 유자 향이 진한 시오 라멘 시그니처. 가벼운 점심으로 굿. 1,200엔대.</div>
+            </div>
+          </a>
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=Mensho+Tokyo+카구라자카" target="_blank">
+            <div class="food-row-num">02</div>
+            <div>
+              <div class="food-row-name">Mensho Tokyo 카구라자카 (麺庄)<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">트러플·와규 라멘</div>
+              <div class="food-row-desc">트러플 + 와규 토핑의 모던 라멘. 카구라자카 동네 분위기도 챙김. 1,500~2,500엔.</div>
+            </div>
+          </a>
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=이치란+시부야+스페인자카점" target="_blank">
+            <div class="food-row-num">03</div>
+            <div>
+              <div class="food-row-name">이치란 시부야 스페인자카점 (一蘭)<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">독립석 라멘 · 24시간</div>
+              <div class="food-row-desc">개인 칸막이석 클래식 톤코츠 라멘. 24시간 영업. 솔로 야식으로 적합. 1,000~1,500엔.</div>
+            </div>
+          </a>
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=Tsuta+라멘+요요기우에하라" target="_blank">
+            <div class="food-row-num">04</div>
+            <div>
+              <div class="food-row-name">Tsuta (蔦) 요요기우에하라<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">세계 최초 미슐랭 1스타 라멘</div>
+              <div class="food-row-desc">트러플 오일 쇼유 라멘. 새벽 줄 가능. 가까이서 자리 있을 때 도전. 1,500~2,500엔.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-head">
+          <div class="food-category">우동 · 소바</div>
+        </div>
+        <div class="food-list">
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=Yamamoto+Menzo+오모테산도" target="_blank">
+            <div class="food-row-num">01</div>
+            <div>
+              <div class="food-row-name">Yamamoto Menzo 오모테산도 (山本麺蔵)<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">우엉 튀김 우동(고보텐 우동)</div>
+              <div class="food-row-desc">교토 본점의 도쿄 지점. 고보텐 우동이 시그니처. 점심 12시 전 도착 권장. 1,200~1,800엔.</div>
+            </div>
+          </a>
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=호우토에+신주쿠+소바" target="_blank">
+            <div class="food-row-num">02</div>
+            <div>
+              <div class="food-row-name">호우토에 신주쿠 (蕎麦処 朝日屋)<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">자가제분 소바 · 미슐랭 빕</div>
+              <div class="food-row-desc">신주쿠역 인근. 자가제분 소바의 격조있는 한 그릇. 점심 12:00~14:00. 1,500~2,500엔.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-head">
+          <div class="food-category">카페 · 추가</div>
+          <span class="food-pill">스페셜티 · 일본차</span>
+        </div>
+        <div class="food-list">
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=Glitch+Coffee+진보초" target="_blank">
+            <div class="food-row-num">01</div>
+            <div>
+              <div class="food-row-name">Glitch Coffee 진보초 (グリッチ)<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">싱글 오리진 핸드드립</div>
+              <div class="food-row-desc">일본 스페셜티 커피의 정수. 모닝 산책 + 진보초 책방 골목과 조합하면 최고.</div>
+            </div>
+          </a>
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=Tokyo+Saryo+산겐자야" target="_blank">
+            <div class="food-row-num">02</div>
+            <div>
+              <div class="food-row-name">Tokyo Saryo 산겐자야 (東京茶寮)<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">일본차 핸드드립 전문</div>
+              <div class="food-row-desc">말차·호지차·교쿠로를 핸드드립 방식으로. 산겐자야 골목. 차 좋아하면 무조건.</div>
+            </div>
+          </a>
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=Bricolage+Bread+롯본기" target="_blank">
+            <div class="food-row-num">03</div>
+            <div>
+              <div class="food-row-name">Bricolage Bread &amp; Co. 롯본기<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">베이커리 카페</div>
+              <div class="food-row-desc">롯본기 6초메. 빵 + 커피 + 한 끼 가능. 토요일 아침 브런치로 적합.</div>
+            </div>
+          </a>
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=Arabica+다이칸야마" target="_blank">
+            <div class="food-row-num">04</div>
+            <div>
+              <div class="food-row-name">% Arabica 다이칸야마<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">교토발 미니멀 카페</div>
+              <div class="food-row-desc">다이칸야마 T-SITE 가는 길에 자연스럽게. 라떼가 시그니처.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-head">
+          <div class="food-category">디저트 · 추가</div>
+        </div>
+        <div class="food-list">
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=HARBS+롯본기힐즈" target="_blank">
+            <div class="food-row-num">01</div>
+            <div>
+              <div class="food-row-name">HARBS 롯본기 힐즈 (ハーブス)<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">시즌 후르츠 케이크</div>
+              <div class="food-row-desc">롯본기 힐즈 지점. 미르페이 케이크 시그니처. 와이프와 잘 어울리는 분위기.</div>
+            </div>
+          </a>
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=Casaneo+신주쿠+NEWoMan" target="_blank">
+            <div class="food-row-num">02</div>
+            <div>
+              <div class="food-row-name">Casaneo 신주쿠 NEWoMan<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">홋카이도 디저트</div>
+              <div class="food-row-desc">신주쿠 NEWoMan 4F. SALON BAKE 가는 김에 같이. 캐러멜 푸딩 인기.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-head">
+          <div class="food-category">야키토리 · 이자카야</div>
+          <span class="food-pill">저녁</span>
+        </div>
+        <div class="food-list">
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=오모이데+요코초+신주쿠" target="_blank">
+            <div class="food-row-num">01</div>
+            <div>
+              <div class="food-row-name">오모이데 요코초 (思い出横丁)<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">신주쿠 서구 골목</div>
+              <div class="food-row-desc">쇼와 시대 분위기의 좁은 야키토리 골목. 가게마다 짧게 들렀다 나오기. 1인 2,000~4,000엔.</div>
+            </div>
+          </a>
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=Torikizoku+시부야" target="_blank">
+            <div class="food-row-num">02</div>
+            <div>
+              <div class="food-row-name">Torikizoku 시부야 (鳥貴族)<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">균일가 야키토리 체인</div>
+              <div class="food-row-desc">한 품목 360엔 균일. 가벼운 저녁 + 맥주. 1인 2,500~3,500엔.</div>
+            </div>
+          </a>
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=하카타+텐푸라+이자카야+롯본기" target="_blank">
+            <div class="food-row-num">03</div>
+            <div>
+              <div class="food-row-name">하카타 텐푸라 이자카야 (롯본기)<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">덴푸라 + 이자카야</div>
+              <div class="food-row-desc">호텔 근처. 와이프와 가벼운 저녁 옵션. 사케 페어링도 가능.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="food-card">
+        <div class="food-card-head">
+          <div class="food-category">바 · 칵테일</div>
+          <span class="food-pill">늦은 밤</span>
+        </div>
+        <div class="food-list">
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=Bar+Ben+Fiddich+신주쿠" target="_blank">
+            <div class="food-row-num">01</div>
+            <div>
+              <div class="food-row-name">Bar Ben Fiddich 신주쿠<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">허브 칵테일 · 일생에 한 번</div>
+              <div class="food-row-desc">바텐더가 직접 키운 허브로 만드는 칵테일. 예약 필수. 1잔 3,000엔~.</div>
+            </div>
+          </a>
+          <a class="food-row-link" href="https://www.google.com/maps/search/?api=1&query=Bar+High+Five+긴자" target="_blank">
+            <div class="food-row-num">02</div>
+            <div>
+              <div class="food-row-name">Bar High Five 긴자<span class="map-pin">↗</span></div>
+              <div class="food-row-jp">정통 일본 위스키 바</div>
+              <div class="food-row-desc">하이볼의 정수. 슈트 차림의 바텐더. 긴자 8초메 지하. 1잔 2,500~4,000엔.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- MORE COURSES -->
+  <!-- ============================================ -->
+  <section class="section">
+    <div class="section-head">
+      <div class="section-label">More to walk</div>
+      <h2 class="section-title">더 추천 · 코스</h2>
+      <p class="section-intro">기본 일정 사이에 끼워넣을 수 있는 동네 코스. 각 코스의 가게/장소도 모두 구글맵 연결됩니다.</p>
+    </div>
+
+    <div class="course-card">
+      <div class="course-head">
+        <div class="course-tag">반나절</div>
+        <div class="course-title">시모키타자와 · 빈티지와 책</div>
+        <div class="course-duration">≈ 4시간</div>
+      </div>
+      <p class="course-tagline">— 도쿄에서 가장 자유로운 동네.</p>
+      <div class="course-stops">
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=COW+BOOKS+나카메구로" target="_blank">
+          <div class="course-stop-num">01</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">COW BOOKS 나카메구로</div>
+            <div class="course-stop-desc">작가들의 큐레이션 + 사진집 + 디자인 책. 작지만 알찬 책방.</div>
+          </div>
+        </a>
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=시모키타자와+빈티지" target="_blank">
+          <div class="course-stop-num">02</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">시모키타자와 빈티지 거리</div>
+            <div class="course-stop-desc">Flamingo, Chicago, NewYorkJoe Exchange — 빈티지샵 + 골목 산책.</div>
+          </div>
+        </a>
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=B%26B+시모키타자와+서점" target="_blank">
+          <div class="course-stop-num">03</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">B&amp;B (Book and Beer)</div>
+            <div class="course-stop-desc">맥주 마시며 책 보는 서점. 작가 토크 이벤트도 자주.</div>
+          </div>
+        </a>
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=Tokyo+Saryo+산겐자야" target="_blank">
+          <div class="course-stop-num">04</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">Tokyo Saryo 산겐자야 (마무리 차)</div>
+            <div class="course-stop-desc">시모키타자와에서 한 정거장. 차 한잔으로 마무리.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-head">
+        <div class="course-tag">반나절</div>
+        <div class="course-title">오모테산도 · 아오야마 산책</div>
+        <div class="course-duration">≈ 3시간</div>
+      </div>
+      <p class="course-tagline">— 도쿄에서 가장 우아한 가로수길.</p>
+      <div class="course-stops">
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=Arabica+오모테산도" target="_blank">
+          <div class="course-stop-num">01</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">% Arabica 오모테산도 (시작 커피)</div>
+            <div class="course-stop-desc">오모테산도역 도보 3분. 라떼 한 잔으로 시작.</div>
+          </div>
+        </a>
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=네즈미술관" target="_blank">
+          <div class="course-stop-num">02</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">네즈 미술관 (根津美術館)</div>
+            <div class="course-stop-desc">아오야마. 일본 정원 + 동양 미술. 950엔. 사진 명소.</div>
+          </div>
+        </a>
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=Prada+Aoyama+Epicenter" target="_blank">
+          <div class="course-stop-num">03</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">Prada 아오야마 · Comme des Garçons</div>
+            <div class="course-stop-desc">건축 자체가 작품. 일본 디자인 거리.</div>
+          </div>
+        </a>
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=Aoyama+Flower+Market+Tea+House" target="_blank">
+          <div class="course-stop-num">04</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">Aoyama Flower Market Tea House</div>
+            <div class="course-stop-desc">꽃집 안의 작은 티 하우스. 꽃차로 마무리.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-head">
+        <div class="course-tag">저녁</div>
+        <div class="course-title">도쿄 야경 코스</div>
+        <div class="course-duration">≈ 3시간</div>
+      </div>
+      <p class="course-tagline">— 시부야 일몰부터 도쿄타워 야경까지.</p>
+      <div class="course-stops">
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=시부야+스카이" target="_blank">
+          <div class="course-stop-num">01</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">SHIBUYA SKY (시부야 스카이)</div>
+            <div class="course-stop-desc">시부야 스크램블 스퀘어 옥상 전망대. 일몰 + 야경 조합. 2,500엔. 사전 예매 권장.</div>
+          </div>
+        </a>
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=시바공원+도쿄타워" target="_blank">
+          <div class="course-stop-num">02</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">시바 공원 (도쿄타워 사진 포인트)</div>
+            <div class="course-stop-desc">전망대 안 가도 시바공원 잔디밭에서 본 도쿄타워가 가장 예쁘다. 무료.</div>
+          </div>
+        </a>
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=Roppongi+Hills+Sky+Deck" target="_blank">
+          <div class="course-stop-num">03</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">롯본기 힐즈 스카이 데크 (마무리)</div>
+            <div class="course-stop-desc">옥상에서 도쿄타워 정면 야경. 호텔까지 도보권이라 마무리하기 좋음.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-head">
+        <div class="course-tag">얼리 모닝</div>
+        <div class="course-title">츠키지 시장 모닝</div>
+        <div class="course-duration">≈ 2시간</div>
+      </div>
+      <p class="course-tagline">— 도쿄에서 가장 신선한 아침.</p>
+      <div class="course-stops">
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=츠키지+장외시장" target="_blank">
+          <div class="course-stop-num">01</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">츠키지 장외시장 (築地場外市場)</div>
+            <div class="course-stop-desc">07:00 전후 도착 권장. 다마고야키, 우니, 참치 카츠, 회 노점. 아침 산책.</div>
+          </div>
+        </a>
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=스시제+츠키지" target="_blank">
+          <div class="course-stop-num">02</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">스시제 츠키지 (寿司 清)</div>
+            <div class="course-stop-desc">아침 스시. 8시 오픈. 노포 분위기. 5,000~8,000엔.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="course-head">
+        <div class="course-tag">반나절</div>
+        <div class="course-title">키치조지 · 이노카시라 공원</div>
+        <div class="course-duration">≈ 4시간</div>
+      </div>
+      <p class="course-tagline">— 도쿄 사람들이 살고 싶어 하는 동네.</p>
+      <div class="course-stops">
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=키치조지역" target="_blank">
+          <div class="course-stop-num">01</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">키치조지역 (吉祥寺駅)</div>
+            <div class="course-stop-desc">시부야 → 게이오 이노카시라선 약 18분. 도쿄에서 살기 좋은 동네 1위.</div>
+          </div>
+        </a>
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=이노카시라+공원" target="_blank">
+          <div class="course-stop-num">02</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">이노카시라 공원 (井の頭公園)</div>
+            <div class="course-stop-desc">호수 + 산책로 + 보트. 평일에 도쿄 사람들의 휴식 공간.</div>
+          </div>
+        </a>
+        <a class="course-stop" href="https://www.google.com/maps/search/?api=1&query=하모니카+요코초+키치조지" target="_blank">
+          <div class="course-stop-num">03</div>
+          <div class="course-stop-content">
+            <div class="course-stop-name">하모니카 요코쵸 (ハモニカ横丁)</div>
+            <div class="course-stop-desc">키치조지역 북쪽 작은 골목. 옛 분위기 + 골목 식당.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
   </section>
 
   <footer class="doc-footer">
