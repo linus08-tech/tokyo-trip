@@ -25,7 +25,11 @@
     --sans: 'Noto Sans KR', sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { -webkit-text-size-adjust: 100%; }
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 64px;
+  }
   body {
     font-family: var(--sans);
     background: var(--bg);
@@ -719,10 +723,67 @@
     line-height: 1.6;
   }
 
+  /* ---------- Table of Contents (sticky) ---------- */
+  .toc {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(251, 247, 240, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+    margin: 0 -16px 40px;
+    padding: 10px 16px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .toc::-webkit-scrollbar { display: none; }
+  .toc-inner {
+    display: flex;
+    gap: 4px;
+    white-space: nowrap;
+    max-width: 760px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  .toc-label {
+    font-family: var(--serif);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-right: 10px;
+    margin-right: 6px;
+    border-right: 1px solid var(--line);
+    flex-shrink: 0;
+  }
+  .toc a {
+    font-family: var(--serif);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 6px 11px;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    background: var(--bg-card);
+    transition: all 0.15s;
+    flex-shrink: 0;
+  }
+  .toc a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .section { scroll-margin-top: 64px; }
+
   /* ---------- Print ---------- */
   @media print {
     body { background: white; padding: 0; }
     .day, .section { page-break-inside: avoid; }
+    .toc { display: none; }
   }
 </style>
 </head>
@@ -744,9 +805,28 @@
   </header>
 
   <!-- ============================================ -->
+  <!-- TABLE OF CONTENTS (sticky) -->
+  <!-- ============================================ -->
+  <nav class="toc" aria-label="목차">
+    <div class="toc-inner">
+      <span class="toc-label">목차</span>
+      <a href="#flights">항공</a>
+      <a href="#stays">숙소</a>
+      <a href="#solo">솔로 D1-3</a>
+      <a href="#duo">듀오 D4-5</a>
+      <a href="#eats">맛집</a>
+      <a href="#shopping">쇼핑</a>
+      <a href="#transport">교통</a>
+      <a href="#checklist">준비물</a>
+      <a href="#more-eats">더 맛집</a>
+      <a href="#more-courses">더 코스</a>
+    </div>
+  </nav>
+
+  <!-- ============================================ -->
   <!-- FLIGHT INFO -->
   <!-- ============================================ -->
-  <section class="section">
+  <section class="section" id="flights">
     <div class="section-head">
       <div class="section-label">Flights</div>
       <h2 class="section-title">비행 정보</h2>
@@ -796,7 +876,7 @@
   <!-- ============================================ -->
   <!-- HOTELS -->
   <!-- ============================================ -->
-  <section class="section">
+  <section class="section" id="stays">
     <div class="section-head">
       <div class="section-label">Stays</div>
       <h2 class="section-title">숙소</h2>
@@ -830,7 +910,7 @@
   <!-- ============================================ -->
   <!-- DAY 1 -->
   <!-- ============================================ -->
-  <section class="section">
+  <section class="section" id="solo">
     <div class="section-head">
       <div class="section-label">Day-by-day · Part 1 — Solo</div>
       <h2 class="section-title">일정 · 솔로</h2>
@@ -1149,7 +1229,7 @@
   <!-- ============================================ -->
   <!-- DAY 4 + DAY 5 -->
   <!-- ============================================ -->
-  <section class="section">
+  <section class="section" id="duo">
     <div class="section-head">
       <div class="section-label">Day-by-day · Part 2 — Duo</div>
       <h2 class="section-title">일정 · 듀오</h2>
@@ -1391,7 +1471,7 @@
   <!-- ============================================ -->
   <!-- FOOD GUIDE -->
   <!-- ============================================ -->
-  <section class="section">
+  <section class="section" id="eats">
     <div class="section-head">
       <div class="section-label">Eats</div>
       <h2 class="section-title">맛집 모음</h2>
@@ -1539,7 +1619,7 @@
   <!-- ============================================ -->
   <!-- SHOPPING -->
   <!-- ============================================ -->
-  <section class="section">
+  <section class="section" id="shopping">
     <div class="section-head">
       <div class="section-label">Shopping</div>
       <h2 class="section-title">일본 과자 쇼핑</h2>
@@ -1579,7 +1659,7 @@
   <!-- ============================================ -->
   <!-- TRANSPORT -->
   <!-- ============================================ -->
-  <section class="section">
+  <section class="section" id="transport">
     <div class="section-head">
       <div class="section-label">Getting around</div>
       <h2 class="section-title">교통 가이드</h2>
@@ -1752,7 +1832,7 @@
   <!-- ============================================ -->
   <!-- CHECKLIST -->
   <!-- ============================================ -->
-  <section class="section">
+  <section class="section" id="checklist">
     <div class="section-head">
       <div class="section-label">Before we go</div>
       <h2 class="section-title">체크리스트</h2>
@@ -1805,7 +1885,7 @@
   <!-- ============================================ -->
   <!-- MORE FOOD RECOMMENDATIONS -->
   <!-- ============================================ -->
-  <section class="section">
+  <section class="section" id="more-eats">
     <div class="section-head">
       <div class="section-label">More to taste</div>
       <h2 class="section-title">더 추천 · 맛집</h2>
@@ -2093,7 +2173,7 @@
   <!-- ============================================ -->
   <!-- MORE COURSES -->
   <!-- ============================================ -->
-  <section class="section">
+  <section class="section" id="more-courses">
     <div class="section-head">
       <div class="section-label">More to walk</div>
       <h2 class="section-title">더 추천 · 코스</h2>
