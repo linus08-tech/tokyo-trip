@@ -107,6 +107,29 @@
     margin-top: 8px;
     max-width: 540px;
   }
+  .day-actions {
+    display: inline-flex;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .day-actions button {
+    font-family: var(--serif);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .day-actions button:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
 
   /* ---------- Flight cards ---------- */
   .flight-grid {
@@ -197,6 +220,40 @@
   /* ---------- Day cards ---------- */
   .day {
     margin-bottom: 40px;
+  }
+  details.day > summary {
+    list-style: none;
+    cursor: pointer;
+    outline: none;
+  }
+  details.day > summary::-webkit-details-marker { display: none; }
+  details.day > summary::marker { content: ''; }
+  details.day > summary:focus-visible .day-date {
+    color: var(--accent);
+  }
+  details.day:not([open]) > summary {
+    margin-bottom: 0;
+  }
+  details.day:not([open]) > summary .day-tagline {
+    margin-bottom: 0;
+  }
+  details.day > summary:hover .day-chevron {
+    color: var(--accent);
+  }
+  .day-chevron {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    margin-left: 2px;
+    font-size: 11px;
+    color: var(--ink-mute);
+    transition: transform 0.2s ease, color 0.15s;
+    flex-shrink: 0;
+  }
+  details.day[open] > summary .day-chevron {
+    transform: rotate(180deg);
   }
   .day-header {
     display: flex;
@@ -784,6 +841,10 @@
     body { background: white; padding: 0; }
     .day, .section { page-break-inside: avoid; }
     .toc { display: none; }
+    details.day > summary { cursor: default; }
+    details.day .day-chevron { display: none; }
+    details.day > *:not(summary) { display: block !important; }
+    .day-actions { display: none; }
   }
 </style>
 </head>
@@ -914,14 +975,21 @@
     <div class="section-head">
       <div class="section-label">Day-by-day · Part 1 — Solo</div>
       <h2 class="section-title">일정 · 솔로</h2>
+      <div class="day-actions">
+        <button type="button" data-day-action="expand">모두 펼침</button>
+        <button type="button" data-day-action="collapse">모두 접기</button>
+      </div>
     </div>
 
-    <div class="day">
-      <div class="day-header">
-        <div class="day-date"><span class="day-number">D1</span> &nbsp; 5/27 수요일</div>
-        <div class="day-style mid">중간형</div>
-      </div>
-      <p class="day-tagline">— 도쿄, 다시 시작.</p>
+    <details class="day" open>
+      <summary>
+        <div class="day-header">
+          <div class="day-date"><span class="day-number">D1</span> &nbsp; 5/27 수요일</div>
+          <div class="day-style mid">중간형</div>
+          <span class="day-chevron" aria-hidden="true">▾</span>
+        </div>
+        <p class="day-tagline">— 도쿄, 다시 시작.</p>
+      </summary>
 
       <div class="timeline">
         <div class="tl-item move">
@@ -1004,17 +1072,20 @@
           <div class="tl-desc">첫날은 무리하지 않기. 내일부터 공격형.</div>
         </div>
       </div>
-    </div>
+    </details>
 
     <!-- ============================================ -->
     <!-- DAY 2 -->
     <!-- ============================================ -->
-    <div class="day">
-      <div class="day-header">
-        <div class="day-date"><span class="day-number">D2</span> &nbsp; 5/28 목요일</div>
-        <div class="day-style">공격형</div>
-      </div>
-      <p class="day-tagline">— 서점의 도시, 그리고 첫 파르페.</p>
+    <details class="day">
+      <summary>
+        <div class="day-header">
+          <div class="day-date"><span class="day-number">D2</span> &nbsp; 5/28 목요일</div>
+          <div class="day-style">공격형</div>
+          <span class="day-chevron" aria-hidden="true">▾</span>
+        </div>
+        <p class="day-tagline">— 서점의 도시, 그리고 첫 파르페.</p>
+      </summary>
 
       <div class="timeline">
         <div class="tl-item food">
@@ -1110,17 +1181,20 @@
           <div class="tl-desc">신주쿠 → 시부야 → 이케지리오하시. 심야 택시 옵션도. 내일 솔로 마지막 + 주영 마중.</div>
         </div>
       </div>
-    </div>
+    </details>
 
     <!-- ============================================ -->
     <!-- DAY 3 -->
     <!-- ============================================ -->
-    <div class="day">
-      <div class="day-header">
-        <div class="day-date"><span class="day-number">D3</span> &nbsp; 5/29 금요일</div>
-        <div class="day-style">공격형</div>
-      </div>
-      <p class="day-tagline">— 쇼군버거, 파르페, 그리고 주영을 기다리는 저녁.</p>
+    <details class="day">
+      <summary>
+        <div class="day-header">
+          <div class="day-date"><span class="day-number">D3</span> &nbsp; 5/29 금요일</div>
+          <div class="day-style">공격형</div>
+          <span class="day-chevron" aria-hidden="true">▾</span>
+        </div>
+        <p class="day-tagline">— 쇼군버거, 파르페, 그리고 주영을 기다리는 저녁.</p>
+      </summary>
 
       <div class="alert-box">
         <strong>오늘의 미션</strong> — 21시 주영 도착. 저녁 포장은 18:30~19:00 픽업 권장.
@@ -1223,7 +1297,7 @@
           <div class="tl-desc">주영이 나리타 7시 도착 → 호텔까지 약 2시간. 이동 피로 있으니 첫날은 호텔에서 편하게.</div>
         </div>
       </div>
-    </div>
+    </details>
   </section>
 
   <!-- ============================================ -->
@@ -1233,14 +1307,21 @@
     <div class="section-head">
       <div class="section-label">Day-by-day · Part 2 — Duo</div>
       <h2 class="section-title">일정 · 듀오</h2>
+      <div class="day-actions">
+        <button type="button" data-day-action="expand">모두 펼침</button>
+        <button type="button" data-day-action="collapse">모두 접기</button>
+      </div>
     </div>
 
-    <div class="day">
-      <div class="day-header">
-        <div class="day-date"><span class="day-number">D4</span> &nbsp; 5/30 토요일</div>
-        <div class="day-style">공격형</div>
-      </div>
-      <p class="day-tagline">— 장어, 파르페, 야키니쿠. 모든 게 다 있는 하루.</p>
+    <details class="day">
+      <summary>
+        <div class="day-header">
+          <div class="day-date"><span class="day-number">D4</span> &nbsp; 5/30 토요일</div>
+          <div class="day-style">공격형</div>
+          <span class="day-chevron" aria-hidden="true">▾</span>
+        </div>
+        <p class="day-tagline">— 장어, 파르페, 야키니쿠. 모든 게 다 있는 하루.</p>
+      </summary>
 
       <div class="alert-box">
         <strong>예약 필수</strong> — 토요일 저녁 야키니쿠는 1~2일 전 예약. Parfaiteria beL도 인스타로 영업 확인. 장어덮밥집(아카사카 후키누키)은 점심 줄 가능, 11:30 도착 권장.
@@ -1364,17 +1445,20 @@
           <div class="tl-desc">롯본기 힐즈 야경 산책. 에너지 남으면 미드타운 근처 바에서 가볍게 한 잔.</div>
         </div>
       </div>
-    </div>
+    </details>
 
     <!-- ============================================ -->
     <!-- DAY 5 -->
     <!-- ============================================ -->
-    <div class="day">
-      <div class="day-header">
-        <div class="day-date"><span class="day-number">D5</span> &nbsp; 5/31 일요일</div>
-        <div class="day-style">공격형</div>
-      </div>
-      <p class="day-tagline">— 마지막 파르페와 가벼운 작별.</p>
+    <details class="day">
+      <summary>
+        <div class="day-header">
+          <div class="day-date"><span class="day-number">D5</span> &nbsp; 5/31 일요일</div>
+          <div class="day-style">공격형</div>
+          <span class="day-chevron" aria-hidden="true">▾</span>
+        </div>
+        <p class="day-tagline">— 마지막 파르페와 가벼운 작별.</p>
+      </summary>
 
       <div class="alert-box">
         <strong>시간 압박</strong> — 비행 20:10 / 호텔 출발 데드라인 <strong>15:30</strong> / 신주쿠 출발 데드라인 <strong>16:00</strong>. 짐 아침에 미리 다 싸두기.
@@ -1482,7 +1566,7 @@
           <div class="tl-desc">짐 찾고 입국. 늦은 시간이라 공항 리무진/택시 확인.</div>
         </div>
       </div>
-    </div>
+    </details>
   </section>
 
   <!-- ============================================ -->
@@ -2378,6 +2462,19 @@
   </footer>
 
 </article>
+
+<script>
+  document.querySelectorAll('[data-day-action]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var expand = btn.dataset.dayAction === 'expand';
+      var section = btn.closest('section');
+      if (!section) return;
+      section.querySelectorAll('details.day').forEach(function (d) {
+        d.open = expand;
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
