@@ -107,6 +107,36 @@
     margin-top: 8px;
     max-width: 540px;
   }
+  details.sect-fold > summary {
+    list-style: none;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding-right: 32px;
+  }
+  details.sect-fold > summary::-webkit-details-marker { display: none; }
+  details.sect-fold > summary::marker { content: ''; }
+  details.sect-fold > summary .day-chevron {
+    position: absolute;
+    top: 18px;
+    right: 2px;
+    width: 24px;
+    height: 24px;
+    font-size: 13px;
+  }
+  details.sect-fold > summary:hover .day-chevron {
+    color: var(--accent);
+  }
+  details.sect-fold > summary:hover .section-title {
+    color: var(--accent);
+    transition: color 0.15s;
+  }
+  details.sect-fold[open] > summary .day-chevron {
+    transform: rotate(180deg);
+  }
+  details.sect-fold:not([open]) > summary.section-head {
+    margin-bottom: 0;
+  }
   .day-actions {
     display: inline-flex;
     gap: 6px;
@@ -841,9 +871,12 @@
     body { background: white; padding: 0; }
     .day, .section { page-break-inside: avoid; }
     .toc { display: none; }
-    details.day > summary { cursor: default; }
-    details.day .day-chevron { display: none; }
-    details.day > *:not(summary) { display: block !important; }
+    details.day > summary,
+    details.sect-fold > summary { cursor: default; }
+    details.day .day-chevron,
+    details.sect-fold .day-chevron { display: none; }
+    details.day > *:not(summary),
+    details.sect-fold > *:not(summary) { display: block !important; }
     .day-actions { display: none; }
   }
 </style>
@@ -1721,11 +1754,13 @@
   <!-- SHOPPING -->
   <!-- ============================================ -->
   <section class="section" id="shopping">
-    <div class="section-head">
-      <div class="section-label">Shopping</div>
-      <h2 class="section-title">일본 과자 쇼핑</h2>
-      <p class="section-intro">큰 쇼핑은 없고 일본 과자 위주. 위탁 15kg 한도 고려해서 분산 픽업.</p>
-    </div>
+    <details class="sect-fold">
+      <summary class="section-head">
+        <div class="section-label">Shopping</div>
+        <h2 class="section-title">일본 과자 쇼핑</h2>
+        <p class="section-intro">큰 쇼핑은 없고 일본 과자 위주. 위탁 15kg 한도 고려해서 분산 픽업.</p>
+        <span class="day-chevron" aria-hidden="true">▾</span>
+      </summary>
 
     <div class="shop-grid">
 
@@ -1760,17 +1795,20 @@
       </div>
 
     </div>
+    </details>
   </section>
 
   <!-- ============================================ -->
   <!-- TRANSPORT -->
   <!-- ============================================ -->
   <section class="section" id="transport">
-    <div class="section-head">
-      <div class="section-label">Getting around</div>
-      <h2 class="section-title">교통 가이드</h2>
-      <p class="section-intro">공항과 호텔을 잇는 가장 효율적인 루트. 짐 들고 헤매지 않도록.</p>
-    </div>
+    <details class="sect-fold">
+      <summary class="section-head">
+        <div class="section-label">Getting around</div>
+        <h2 class="section-title">교통 가이드</h2>
+        <p class="section-intro">공항과 호텔을 잇는 가장 효율적인 루트. 짐 들고 헤매지 않도록.</p>
+        <span class="day-chevron" aria-hidden="true">▾</span>
+      </summary>
 
     <!-- ICN → Hotel -->
     <div class="transport-card">
@@ -1933,16 +1971,19 @@
       </div>
     </div>
 
+    </details>
   </section>
 
   <!-- ============================================ -->
   <!-- CHECKLIST -->
   <!-- ============================================ -->
   <section class="section" id="checklist">
-    <div class="section-head">
-      <div class="section-label">Before we go</div>
-      <h2 class="section-title">체크리스트</h2>
-    </div>
+    <details class="sect-fold">
+      <summary class="section-head">
+        <div class="section-label">Before we go</div>
+        <h2 class="section-title">체크리스트</h2>
+        <span class="day-chevron" aria-hidden="true">▾</span>
+      </summary>
 
     <div class="check-grid">
 
@@ -1987,17 +2028,20 @@
       </div>
 
     </div>
+    </details>
   </section>
 
   <!-- ============================================ -->
   <!-- MORE FOOD RECOMMENDATIONS -->
   <!-- ============================================ -->
   <section class="section" id="more-eats">
-    <div class="section-head">
-      <div class="section-label">More to taste</div>
-      <h2 class="section-title">더 추천 · 맛집</h2>
-      <p class="section-intro">기본 일정에 다 못 넣은 것들 + 시간 여유 있거나 다음 번에 가볼 만한 곳. <strong>가게 이름이나 카드를 터치하면 구글맵으로 바로 연결</strong>됩니다.</p>
-    </div>
+    <details class="sect-fold">
+      <summary class="section-head">
+        <div class="section-label">More to taste</div>
+        <h2 class="section-title">더 추천 · 맛집</h2>
+        <p class="section-intro">기본 일정에 다 못 넣은 것들 + 시간 여유 있거나 다음 번에 가볼 만한 곳. <strong>가게 이름이나 카드를 터치하면 구글맵으로 바로 연결</strong>됩니다.</p>
+        <span class="day-chevron" aria-hidden="true">▾</span>
+      </summary>
 
     <div class="food-grid">
 
@@ -2275,17 +2319,20 @@
       </div>
 
     </div>
+    </details>
   </section>
 
   <!-- ============================================ -->
   <!-- MORE COURSES -->
   <!-- ============================================ -->
   <section class="section" id="more-courses">
-    <div class="section-head">
-      <div class="section-label">More to walk</div>
-      <h2 class="section-title">더 추천 · 코스</h2>
-      <p class="section-intro">기본 일정 사이에 끼워넣을 수 있는 동네 코스. 각 코스의 가게/장소도 모두 구글맵 연결됩니다.</p>
-    </div>
+    <details class="sect-fold">
+      <summary class="section-head">
+        <div class="section-label">More to walk</div>
+        <h2 class="section-title">더 추천 · 코스</h2>
+        <p class="section-intro">기본 일정 사이에 끼워넣을 수 있는 동네 코스. 각 코스의 가게/장소도 모두 구글맵 연결됩니다.</p>
+        <span class="day-chevron" aria-hidden="true">▾</span>
+      </summary>
 
     <div class="course-card">
       <div class="course-head">
@@ -2454,6 +2501,7 @@
       </div>
     </div>
 
+    </details>
   </section>
 
   <footer class="doc-footer">
@@ -2474,6 +2522,23 @@
       });
     });
   });
+
+  function openTarget(hash) {
+    if (!hash) return;
+    var target = document.querySelector(hash);
+    if (!target) return;
+    var d = target.querySelector('details.sect-fold');
+    if (d && !d.open) d.open = true;
+  }
+  document.querySelectorAll('.toc a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      openTarget(a.getAttribute('href'));
+    });
+  });
+  window.addEventListener('hashchange', function () {
+    openTarget(window.location.hash);
+  });
+  if (window.location.hash) openTarget(window.location.hash);
 </script>
 
 </body>
