@@ -880,6 +880,36 @@
     details.sect-fold > *:not(summary) { display: block !important; }
     .day-actions { display: none; }
   }
+
+  /* photo gallery */
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .photo-gallery a {
+    display: block;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #1a1a1a;
+  }
+  .photo-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+  .photo-gallery a:hover img {
+    transform: scale(1.05);
+  }
+  .photo-caption {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.55);
+    margin-top: 4px;
+  }
 </style>
 </head>
 <body>
@@ -1073,8 +1103,23 @@
           <div class="tl-time">13:30</div>
           <div class="tl-title">🍜 점심 · 야쿠모 (八雲) 라멘</div>
           <div class="tl-desc">메구로 동네 라멘 노포. 도쿄 첫 한 끼.</div>
+          <div class="photo-gallery">
+            <a href="photos/d1/01-yakumo-ramen.jpeg" target="_blank"><img src="photos/d1/01-yakumo-ramen.jpeg" alt="야쿠모 라멘" loading="lazy"></a>
+          </div>
           <div class="tl-meta">
             <span class="tl-tag">라멘</span>
+          </div>
+        </div>
+
+        <div class="tl-item move">
+          <div class="tl-time">14:00</div>
+          <div class="tl-title">🚶 야쿠모 → 스타벅스 길가</div>
+          <div class="tl-desc">메구로 동네 골목 산책. GR3로 한 컷씩.</div>
+          <div class="photo-gallery">
+            <a href="photos/d1/02-walk-a-1.jpeg" target="_blank"><img src="photos/d1/02-walk-a-1.jpeg" alt="야쿠모→스타벅스 길가 1" loading="lazy"></a>
+            <a href="photos/d1/02-walk-a-2.jpeg" target="_blank"><img src="photos/d1/02-walk-a-2.jpeg" alt="야쿠모→스타벅스 길가 2" loading="lazy"></a>
+            <a href="photos/d1/02-walk-a-3.jpeg" target="_blank"><img src="photos/d1/02-walk-a-3.jpeg" alt="야쿠모→스타벅스 길가 3" loading="lazy"></a>
+            <a href="photos/d1/02-walk-a-4.jpeg" target="_blank"><img src="photos/d1/02-walk-a-4.jpeg" alt="야쿠모→스타벅스 길가 4" loading="lazy"></a>
           </div>
         </div>
 
@@ -1086,8 +1131,32 @@
             <strong>세계 5개 로스터리</strong> 중 하나 (시애틀·상하이·밀라노·뉴욕·도쿄). 4층 대형 매장. 메구로강 사쿠라나무 마주 보는 자리.<br>
             파운드케익 + 커피.
           </div>
+          <div class="photo-gallery">
+            <a href="photos/d1/03-starbucks-1.jpeg" target="_blank"><img src="photos/d1/03-starbucks-1.jpeg" alt="스타벅스 리저브 1" loading="lazy"></a>
+            <a href="photos/d1/03-starbucks-2.jpeg" target="_blank"><img src="photos/d1/03-starbucks-2.jpeg" alt="스타벅스 리저브 2" loading="lazy"></a>
+            <a href="photos/d1/03-starbucks-3.jpeg" target="_blank"><img src="photos/d1/03-starbucks-3.jpeg" alt="스타벅스 리저브 3" loading="lazy"></a>
+            <a href="photos/d1/03-starbucks-4.jpeg" target="_blank"><img src="photos/d1/03-starbucks-4.jpeg" alt="스타벅스 리저브 4" loading="lazy"></a>
+            <a href="photos/d1/04-meguro-river.jpeg" target="_blank"><img src="photos/d1/04-meguro-river.jpeg" alt="스타벅스 앞 메구로 강변" loading="lazy"></a>
+            <a href="photos/d1/05-pound-cake.jpeg" target="_blank"><img src="photos/d1/05-pound-cake.jpeg" alt="파운드 케익" loading="lazy"></a>
+          </div>
           <div class="tl-meta">
             <span class="tl-tag mark">리저브 로스터리</span>
+          </div>
+        </div>
+
+        <div class="tl-item move">
+          <div class="tl-time">14:50</div>
+          <div class="tl-title">🚶 스타벅스 → 츠타야 거리 산책</div>
+          <div class="tl-desc">나카메구로 → 다이칸야마 골목 산책. 사쿠라나무·동네 가게.</div>
+          <div class="photo-gallery">
+            <a href="photos/d1/06-walk-b-1.jpeg" target="_blank"><img src="photos/d1/06-walk-b-1.jpeg" alt="스타벅스→츠타야 길가 1" loading="lazy"></a>
+            <a href="photos/d1/06-walk-b-2.jpeg" target="_blank"><img src="photos/d1/06-walk-b-2.jpeg" alt="스타벅스→츠타야 길가 2" loading="lazy"></a>
+            <a href="photos/d1/06-walk-b-3.jpeg" target="_blank"><img src="photos/d1/06-walk-b-3.jpeg" alt="스타벅스→츠타야 길가 3" loading="lazy"></a>
+            <a href="photos/d1/06-walk-b-4.jpeg" target="_blank"><img src="photos/d1/06-walk-b-4.jpeg" alt="스타벅스→츠타야 길가 4" loading="lazy"></a>
+            <a href="photos/d1/06-walk-b-5.jpeg" target="_blank"><img src="photos/d1/06-walk-b-5.jpeg" alt="스타벅스→츠타야 길가 5" loading="lazy"></a>
+            <a href="photos/d1/06-walk-b-6.jpeg" target="_blank"><img src="photos/d1/06-walk-b-6.jpeg" alt="스타벅스→츠타야 길가 6" loading="lazy"></a>
+            <a href="photos/d1/06-walk-b-7.jpeg" target="_blank"><img src="photos/d1/06-walk-b-7.jpeg" alt="스타벅스→츠타야 길가 7" loading="lazy"></a>
+            <a href="photos/d1/06-walk-b-8.jpeg" target="_blank"><img src="photos/d1/06-walk-b-8.jpeg" alt="스타벅스→츠타야 길가 8" loading="lazy"></a>
           </div>
         </div>
 
@@ -1098,18 +1167,24 @@
             호텔 도보 15분. 1·2·3호관 천천히 돌기.<br>
             2층 <strong>안진(Anjin) 라운지</strong>에 자리 잡고 콜라 + 과자. 빈티지 매거진 펼쳐 놓고 천천히.
           </div>
+          <div class="photo-gallery">
+            <a href="photos/d1/07-tsutaya-1.jpeg" target="_blank"><img src="photos/d1/07-tsutaya-1.jpeg" alt="츠타야 서점 1" loading="lazy"></a>
+            <a href="photos/d1/07-tsutaya-2.jpeg" target="_blank"><img src="photos/d1/07-tsutaya-2.jpeg" alt="츠타야 서점 2" loading="lazy"></a>
+            <a href="photos/d1/07-tsutaya-3.jpeg" target="_blank"><img src="photos/d1/07-tsutaya-3.jpeg" alt="츠타야 서점 3" loading="lazy"></a>
+            <a href="photos/d1/07-tsutaya-4.jpeg" target="_blank"><img src="photos/d1/07-tsutaya-4.jpeg" alt="츠타야 서점 4" loading="lazy"></a>
+          </div>
           <div class="tl-meta">
             <span class="tl-tag mark">츠타야</span>
             <span class="tl-tag">안진 라운지</span>
           </div>
         </div>
 
-        <div class="tl-item">
+        <div class="tl-item food">
           <div class="tl-time">저녁</div>
-          <div class="tl-title">🍽️ 저녁 — 패스</div>
-          <div class="tl-desc">점심 라멘 + 스타벅스 리저브 파운드케익 + 라운지 콜라·과자로 이미 배 부름. 첫날은 무리하지 않고 호텔 복귀.</div>
+          <div class="tl-title">🍪 편의점 과자로 마무리</div>
+          <div class="tl-desc">점심 야쿠모 라멘 + 스타벅스 리저브 파운드케익 + 츠타야 라운지 콜라·과자로 배 부른 상태. 호텔 복귀 길에 편의점에서 과자 한두 개만 가볍게.</div>
           <div class="tl-meta">
-            <span class="tl-tag">스킵</span>
+            <span class="tl-tag">가벼움</span>
           </div>
         </div>
 
@@ -1128,104 +1203,115 @@
       <summary>
         <div class="day-header">
           <div class="day-date"><span class="day-number">D2</span> &nbsp; 5/28 목요일</div>
-          <div class="day-style">공격형</div>
+          <div class="day-style mid">📷 솔로 사진·작업일</div>
           <span class="day-chevron" aria-hidden="true">▾</span>
         </div>
-        <p class="day-tagline">— 서점의 도시, 그리고 첫 파르페.</p>
+        <p class="day-tagline">— 한 끼 반, GR3, 카페에서 노트북.</p>
       </summary>
 
       <div class="timeline">
         <div class="tl-item food">
-          <div class="tl-time">08:00</div>
-          <div class="tl-title">나카메구로 모닝 카페</div>
-          <div class="tl-desc"><strong>Onibus Coffee 나카메구로 본점</strong> 또는 <strong>Streamer Coffee</strong>. 일찍 가야 자리 있음. 동네 골목 산책 겸 워밍업.</div>
+          <div class="tl-time">09:00</div>
+          <div class="tl-title">☕ 모닝 카페 (반 끼)</div>
+          <div class="tl-desc">
+            <strong>Onibus Coffee 나카메구로 본점</strong> 또는 <strong>Streamer Coffee 나카메구로</strong>. 호텔 도보 10분. 메구로강변 GR3 워밍업 컷.
+          </div>
           <div class="tl-meta">
             <span class="tl-tag">스페셜티 커피</span>
+            <span class="tl-tag mark">사진 시작</span>
           </div>
         </div>
 
         <div class="tl-item key">
-          <div class="tl-time">10:00 — 12:00</div>
-          <div class="tl-title">시모키타자와 · 동네 산책</div>
+          <div class="tl-time">10:30 — 12:30</div>
+          <div class="tl-title">📷 시모키타자와 · GR3 스트릿 사진</div>
           <div class="tl-desc">
-            메구로 → 시부야 → 게이오 이노카시라선 (총 약 25분).<br>
-            도쿄에서 가장 자유로운 동네. <strong>빈티지샵</strong>(Flamingo, Chicago, NewYorkJoe), <strong>골목 커피숍</strong>, <strong>레코드 가게</strong> 중심으로 천천히. 서점은 동선에 자연스럽게 잡힐 때 <strong>COW BOOKS</strong> 한 곳만 짧게 들르기.
+            메구로 → 시부야 → 게이오 이노카시라선 (총 약 25분). 도쿄에서 가장 자유로운 동네. 빈티지 간판·골목·동네 사람 — 스트릿 사진 천국.<br>
+            <strong>빈티지샵</strong>(Flamingo·Chicago·NewYorkJoe), <strong>레코드 가게</strong>, <strong>골목 카페</strong>. 천천히 걸으며 컷 모으기.
           </div>
           <div class="tl-meta">
-            <span class="tl-tag mark">동네 산책</span>
-            <span class="tl-tag">빈티지</span>
+            <span class="tl-tag mark">스트릿 사진</span>
+            <span class="tl-tag">시모키타자와</span>
           </div>
         </div>
 
         <div class="tl-item food">
-          <div class="tl-time">12:30</div>
-          <div class="tl-title">시모키타자와 점심</div>
-          <div class="tl-desc">개성 가득한 카레집·네팔 식당·라멘. 혼밥 친화적인 골목 식당 많음. 점심은 가볍게 — 오후에 파르페 있음.</div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-time">14:00</div>
-          <div class="tl-title">캣 스트리트 · 우라하라주쿠</div>
-          <div class="tl-desc">시모키타자와 → 시부야 → 하라주쿠 방향 산책. 하라주쿠·시부야 사이 골목길. 갈 때마다 신상 가게 생기는 동네라 새로움.</div>
+          <div class="tl-time">12:30 — 13:30</div>
+          <div class="tl-title">🍜 점심 (오늘의 한 끼)</div>
+          <div class="tl-desc">
+            시모키타자와 골목 식당 — 개성 카레집·네팔 식당·동네 라멘 중 골라잡기. 혼밥 친화적.<br>
+            가볍게 한 그릇, 양 적당히. 오후 카페 작업 + 저녁 파르페 있음.
+          </div>
+          <div class="tl-meta">
+            <span class="tl-tag">한 끼</span>
+          </div>
         </div>
 
         <div class="tl-item key">
-          <div class="tl-time">16:00</div>
-          <div class="tl-title">시부야 PARCO · 미야시타 파크</div>
-          <div class="tl-desc">시부야 PARCO의 닌텐도 도쿄, Pokémon Center 등. 미야시타 파크 옥상 산책. 시간 짧으면 둘 중 하나만.</div>
+          <div class="tl-time">14:00 — 17:00</div>
+          <div class="tl-title">💻 시부야 카페에서 노트북 작업</div>
+          <div class="tl-desc">
+            시모키타자와 → 시부야 (이노카시라선 약 10분). 좌석·전원 안정적인 작업 카페 후보:<br>
+            · <strong>WIRED CAFÉ 시부야 히카리에 8F</strong> — 도시 뷰, 넓고 콘센트 풍부<br>
+            · <strong>FabCafe Tokyo 도겐자카</strong> — 크리에이터 친화, 분위기 좋음<br>
+            · <strong>About Life Coffee Brewers</strong> — 스페셜티 + 작은 작업 좌석<br>
+            · <strong>스타벅스 시부야 츠타야점</strong> — 안전한 기본 옵션<br>
+            3시간 집중 → 메일·문서·코딩.
+          </div>
           <div class="tl-meta">
-            <span class="tl-tag">신상</span>
+            <span class="tl-tag mark">컴퓨터 작업</span>
           </div>
         </div>
 
         <div class="tl-item food">
           <div class="tl-time">17:00 — 18:00</div>
-          <div class="tl-title">🍨 파르페 ① · 시부야 니시무라 후르츠 팔러</div>
+          <div class="tl-title">🍨 파르페 ① · 시부야 니시무라 후르츠 팔러 (반 끼)</div>
           <div class="tl-desc">
             시부야역 도보 1분. 도겐자카점. 1년에 7번 메뉴 갱신, <strong>5월 말은 멜론 시즌</strong>.<br>
-            고급 과일 가게 직영이라 과일 자체 퀄리티가 다름. 혼자 카운터석에서 천천히.
+            고급 과일 가게 직영. 혼자 카운터석에서 천천히.
           </div>
           <div class="tl-loc">
-            <a class="tl-loc-link" href="https://www.google.com/maps/search/?api=1&query=시부야+니시무라+후르츠+팔러+도겐자카점" target="_blank"><strong>📍</strong> 시부야구 도겐자카 2-29-12</a> · 10:30–23:00 · 약 1,500~2,000엔
+            <a class="tl-loc-link" href="https://www.google.com/maps/search/?api=1&query=시부야+니시무라+후르츠+팔러+도겐자카점" target="_blank"><strong>📍</strong> 시부야구 도겐자카 2-29-12</a> · 10:30–23:00 · 1,500~2,000엔
           </div>
           <div class="tl-meta">
-            <span class="tl-tag mark">파르페</span>
+            <span class="tl-tag mark">파르페 · 반 끼</span>
           </div>
         </div>
 
-        <div class="tl-item food">
-          <div class="tl-time">19:30</div>
-          <div class="tl-title">🍣 솔로 가성비 스시 저녁</div>
+        <div class="tl-item key">
+          <div class="tl-time">18:00 — 20:00</div>
+          <div class="tl-title">📷 캣스트리트·하라주쿠·시부야 야간 사진</div>
           <div class="tl-desc">
-            <strong>우오베이(魚べい) 시부야 도겐자카점</strong> 추천 — 회전초밥인데 터치패드 주문, 1접시 110엔~. 1인 1,500~2,500엔으로 배부르게.<br>
-            혼자라 부담 없이 자기 페이스대로. 주영이 토요일에 본격 스시 먹기 전 가벼운 워밍업.
+            시부야 → 하라주쿠 캣스트리트 골목 산책. 해 지는 시간대 골목·간판·사람들. GR3로 천천히.<br>
+            과욕 부리지 말고 한 두 골목만 깊이.
           </div>
           <div class="tl-meta">
-            <span class="tl-tag mark">가성비 스시</span>
+            <span class="tl-tag mark">스트릿 사진</span>
+            <span class="tl-tag">매직아워</span>
           </div>
         </div>
 
         <div class="tl-item food">
           <div class="tl-time">22:30 — 23:30</div>
-          <div class="tl-title">🍜 신주쿠 골든가이 심야 라멘 · 凪 (나기)</div>
+          <div class="tl-title">🍜 (선택) 신주쿠 골든가이 凪 (나기) 심야 라멘</div>
           <div class="tl-desc">
-            우오베이에서 시부야 → 도쿄메트로 후쿠토신선/신주쿠선 신주쿠 약 10분.<br>
-            신주쿠 골든가이 좁은 골목 안쪽 2층. <strong>24시간 영업</strong>. 시그니처는 <strong>니보시(말린 정어리) 라멘</strong> — 진하고 묵직한 멸치 국물에 두꺼운 면. 1,000~1,500엔.<br>
-            좁은 카운터 + 어두운 분위기 = 도쿄 심야의 정수. 솔로로 가야 더 맛있는 곳.
+            <em>한 끼 반 페이스를 지키려면 패스. 컨디션·식욕 남으면 진행 — 솔로로 가야 더 맛있는 곳.</em><br>
+            신주쿠 골든가이 좁은 골목 안쪽 2층. 24시간. 시그니처는 <strong>니보시(말린 정어리) 라멘</strong> — 진한 멸치 국물 + 두꺼운 면. 1,000~1,500엔.<br>
+            동시에 골든가이 자체가 스트릿 사진 천국이라 라멘 없어도 사진 산책만 다녀와도 OK.
           </div>
           <div class="tl-loc">
             <a class="tl-loc-link" href="https://www.google.com/maps/search/?api=1&query=라멘+나기+신주쿠+골든가이" target="_blank"><strong>📍</strong> 신주쿠 1-1-10 골든가이 2F</a> · 24시간 · 1,000~1,500엔
           </div>
           <div class="tl-meta">
-            <span class="tl-tag mark">심야 라멘 · 솔로</span>
-            <span class="tl-tag">24시간</span>
+            <span class="tl-tag">선택</span>
+            <span class="tl-tag">심야 라멘</span>
           </div>
         </div>
 
         <div class="tl-item">
-          <div class="tl-time">24:00</div>
-          <div class="tl-title">호텔 복귀</div>
-          <div class="tl-desc">신주쿠 → 시부야 → 이케지리오하시. 심야 택시 옵션도. 내일 솔로 마지막 + 주영 마중.</div>
+          <div class="tl-time">호텔 복귀</div>
+          <div class="tl-title">오하시 카이칸 · 마무리</div>
+          <div class="tl-desc">시부야 또는 신주쿠 → 이케지리오하시. 내일 솔로 마지막 + 주영 마중.</div>
         </div>
       </div>
     </details>
